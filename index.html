@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Мои финансы</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--tg-theme-bg-color, #0f0f1a);
+    color: var(--tg-theme-text-color, #fff);
+    min-height: 100vh;
+    padding: 16px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .header h1 { font-size: 20px; font-weight: 700; }
+  .header .period { font-size: 13px; opacity: 0.5; margin-top: 4px; }
+
+  .balance-card {
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .balance-card .label { font-size: 13px; opacity: 0.8; margin-bottom: 4px; }
+  .balance-card .amount { font-size: 36px; font-weight: 800; letter-spacing: -1px; }
+  .balance-card .sub { font-size: 12px; opacity: 0.7; margin-top: 8px; }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.07);
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .stat-card .label { font-size: 12px; opacity: 0.5; margin-bottom: 6px; }
+  .stat-card .value { font-size: 20px; font-weight: 700; }
+  .stat-card.income .value { color: #34d399; }
+  .stat-card.expense .value { color: #f87171; }
+
+  .section {
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+  }
+
+  .chart-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .cat-list { display: flex; flex-direction: column; gap: 8px; }
+  .cat-item {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .cat-item:active { background: rgba(255,255,255,0.1); }
+  .cat-item .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .cat-item .name { font-size: 14px; font-weight: 500; }
+  .cat-item .amount { font-size: 14px; font-weight: 700; color: #f87171; }
+  .cat-item .bar-wrap { background: rgba(255,255,255,0.08); border-radius: 4px; height: 4px; }
+  .cat-item .bar { height: 4px; border-radius: 4px; background: linear-gradient(90deg, #7c3aed, #ec4899); }
+  .cat-item .meta { font-size: 11px; opacity: 0.4; margin-top: 4px; }
+
+  .insight-list { display: flex; flex-direction: column; gap: 10px; }
+  .insight {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 14px;
+    border-left: 3px solid;
+  }
+  .insight.red { border-color: #f87171; }
+  .insight.yellow { border-color: #fbbf24; }
+  .insight.green { border-color: #34d399; }
+  .insight .icon { font-size: 18px; margin-bottom: 4px; }
+  .insight .title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .insight .text { font-size: 12px; opacity: 0.6; line-height: 1.4; }
+
+  .ops-list { display: flex; flex-direction: column; gap: 6px; }
+  .op-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .op-item .op-title { font-size: 13px; max-width: 60%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .op-item .op-date { font-size: 11px; opacity: 0.4; margin-top: 2px; }
+  .op-item .op-amount { font-size: 14px; font-weight: 600; }
+  .op-item .op-amount.in { color: #34d399; }
+  .op-item .op-amount.out { color: #f87171; }
+
+  .tabs {
+    display: flex;
+    background: rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 3px;
+    margin-bottom: 16px;
+    gap: 3px;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.15s;
+  }
+  .tab.active {
+    background: rgba(124,58,237,0.6);
+    opacity: 1;
+  }
+
+  .page { display: none; }
+  .page.active { display: block; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>💳 Мои финансы</h1>
+  <div class="period">Июль 2026 · ЮМани</div>
+</div>
+
+<div class="balance-card">
+  <div class="label">Баланс кошелька</div>
+  <div class="amount">874 ₽</div>
+  <div class="sub">4100118088831817</div>
+</div>
+
+<div class="stats-row">
+  <div class="stat-card income">
+    <div class="label">Пришло</div>
+    <div class="value">55 748 ₽</div>
+  </div>
+  <div class="stat-card expense">
+    <div class="label">Ушло</div>
+    <div class="value">55 058 ₽</div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="showPage('overview')">Обзор</div>
+  <div class="tab" onclick="showPage('categories')">Категории</div>
+  <div class="tab" onclick="showPage('insights')">Советы</div>
+  <div class="tab" onclick="showPage('history')">История</div>
+</div>
+
+<!-- ОБЗОР -->
+<div class="page active" id="page-overview">
+  <div class="section">
+    <div class="section-title">Расходы по дням</div>
+    <div class="chart-card">
+      <canvas id="dayChart" height="180"></canvas>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">Куда уходят деньги</div>
+    <div class="chart-card" style="display:flex;align-items:center;justify-content:center;">
+      <canvas id="pieChart" height="220"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- КАТЕГОРИИ -->
+<div class="page" id="page-categories">
+  <div class="cat-list" id="catList"></div>
+</div>
+
+<!-- СОВЕТЫ -->
+<div class="page" id="page-insights">
+  <div class="insight-list">
+    <div class="insight red">
+      <div class="icon">🚨</div>
+      <div class="title">Яндекс Лавка съедает треть бюджета</div>
+      <div class="text">~11 900 ₽ за 27 дней — это ~440 ₽/день только на доставку продуктов. Те же продукты в Пятерочке выйдут на 40–60% дешевле. Потенциальная экономия: 5 000–7 000 ₽/мес.</div>
+    </div>
+    <div class="insight red">
+      <div class="icon">🎮</div>
+      <div class="title">Playerok — двойная трата</div>
+      <div class="text">4 690 ₽ на игровые покупки за месяц. Установи лимит: например 1 500 ₽/мес. Экономия: ~3 000 ₽.</div>
+    </div>
+    <div class="insight yellow">
+      <div class="icon">🚕</div>
+      <div class="title">Такси каждый день</div>
+      <div class="text">17 поездок за 27 дней = 4 655 ₽. Средняя поездка — 274 ₽. Если треть заменить самокатом или пешком — минус ~1 500 ₽.</div>
+    </div>
+    <div class="insight yellow">
+      <div class="icon">📱</div>
+      <div class="title">Два номера телефона</div>
+      <div class="text">Оплачиваешь два тарифа: Т-Мобайл и t2. Итого 2 393 ₽/мес. Если один не нужен — сэкономишь ~700–1 200 ₽.</div>
+    </div>
+    <div class="insight green">
+      <div class="icon">✅</div>
+      <div class="title">Живёшь в ноль — это уже хорошо</div>
+      <div class="text">Расход = доход, дефицита нет. Но и накопления тоже нет. Цель: откладывать хотя бы 10% (≈5 500 ₽/мес) — за год выйдет 66 000 ₽.</div>
+    </div>
+    <div class="insight green">
+      <div class="icon">💡</div>
+      <div class="title">Быстрый план экономии</div>
+      <div class="text">Лавка → магазин: −6 000 ₽<br>Playerok лимит: −3 000 ₽<br>Такси реже: −1 500 ₽<br>Один тариф: −1 000 ₽<br><b>Итого: −11 500 ₽/мес</b></div>
+    </div>
+  </div>
+</div>
+
+<!-- ИСТОРИЯ -->
+<div class="page" id="page-history">
+  <div class="ops-list" id="opsList"></div>
+</div>
+
+<script>
+const DATA = {
+  categories: {
+    "Еда и доставка": { total: 30736, count: 28 },
+    "Развлечения": { total: 6418, count: 6 },
+    "Такси": { total: 4655, count: 17 },
+    "Переводы": { total: 4386, count: 5 },
+    "Вейп": { total: 2937, count: 2 },
+    "Связь": { total: 2393, count: 8 },
+    "Прочее": { total: 3214, count: 3 },
+    "Подписки": { total: 319, count: 1 },
+  },
+  by_day: {
+    "2026-07-01": { "in": 8687, "out": 5760 },
+    "2026-07-02": { "in": 66000, "out": 73134 },
+    "2026-07-03": { "in": 90000, "out": 89819 },
+    "2026-07-05": { "in": 150000, "out": 147150 },
+    "2026-07-06": { "in": 9000, "out": 10050 },
+    "2026-07-07": { "in": 155940, "out": 132419 },
+    "2026-07-08": { "in": 0, "out": 22920 },
+    "2026-07-11": { "in": 468000, "out": 141270 },
+    "2026-07-12": { "in": 314700, "out": 556974 },
+    "2026-07-21": { "in": 45000, "out": 41940 },
+    "2026-07-22": { "in": 45000, "out": 21450 },
+    "2026-07-24": { "in": 30000, "out": 26151 },
+    "2026-07-26": { "in": 135000, "out": 115079 },
+    "2026-07-27": { "in": 150000, "out": 144411 },
+  },
+  recent: [
+    { title: "ПЯТЕРОЧКА 9991", amount: 2023.73, date: "2026-07-27", dir: "out" },
+    { title: "Перевод: SBOL", amount: 1000, date: "2026-07-27", dir: "in" },
+    { title: "PLAYEROK", amount: 2344.98, date: "2026-07-27", dir: "out" },
+    { title: "Перевод: SBOL", amount: 2500, date: "2026-07-27", dir: "in" },
+    { title: "Перевод: OMP", amount: 1500, date: "2026-07-27", dir: "in" },
+    { title: "Северок.", amount: 445, date: "2026-07-27", dir: "out" },
+    { title: "YANDEX*FASTEN", amount: 464, date: "2026-07-26", dir: "out" },
+    { title: "Бар СКВОТ летник", amount: 340, date: "2026-07-26", dir: "out" },
+    { title: "IVI.RU", amount: 399, date: "2026-07-26", dir: "out" },
+    { title: "YANDEX*FASTEN", amount: 288, date: "2026-07-26", dir: "out" },
+    { title: "Playerok", amount: 2344.98, date: "2026-07-26", dir: "out" },
+    { title: "Перевод: SBOL", amount: 2000, date: "2026-07-26", dir: "in" },
+    { title: "Перевод: SBOL", amount: 1000, date: "2026-07-26", dir: "in" },
+    { title: "Перевод: SBOL", amount: 1500, date: "2026-07-26", dir: "in" },
+    { title: "Аптека 1449", amount: 146.52, date: "2026-07-25", dir: "out" },
+    { title: "VAPE MARKET", amount: 2937, date: "2026-07-24", dir: "out" },
+    { title: "YANDEX*FASTEN", amount: 358, date: "2026-07-24", dir: "out" },
+    { title: "Перевод: SBOL", amount: 1000, date: "2026-07-24", dir: "in" },
+    { title: "DODO PIZZA CHELYABINSK", amount: 1370, date: "2026-07-23", dir: "out" },
+    { title: "YANDEX*LAVKARIT", amount: 1931, date: "2026-07-22", dir: "out" },
+  ]
+};
+
+// Инициализация Telegram WebApp
+if (window.Telegram && window.Telegram.WebApp) {
+  Telegram.WebApp.ready();
+  Telegram.WebApp.expand();
+}
+
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// Диаграмма по дням
+const days = Object.keys(DATA.by_day).map(d => d.slice(5));
+const outsArr = Object.values(DATA.by_day).map(d => d.out);
+const insArr = Object.values(DATA.by_day).map(d => d.in);
+
+new Chart(document.getElementById('dayChart'), {
+  type: 'bar',
+  data: {
+    labels: days,
+    datasets: [
+      { label: 'Пришло', data: insArr, backgroundColor: 'rgba(52,211,153,0.5)', borderRadius: 4 },
+      { label: 'Ушло', data: outsArr, backgroundColor: 'rgba(248,113,113,0.5)', borderRadius: 4 },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { labels: { color: '#fff', font: { size: 11 } } } },
+    scales: {
+      x: { ticks: { color: 'rgba(255,255,255,0.4)', font: { size: 10 } }, grid: { display: false } },
+      y: { ticks: { color: 'rgba(255,255,255,0.4)', font: { size: 10 }, callback: v => v >= 1000 ? (v/1000).toFixed(0)+'к' : v }, grid: { color: 'rgba(255,255,255,0.05)' } }
+    }
+  }
+});
+
+// Пай чарт
+const catNames = Object.keys(DATA.categories);
+const catVals = Object.values(DATA.categories).map(c => c.total);
+const colors = ['#7c3aed','#ec4899','#f97316','#eab308','#06b6d4','#10b981','#6366f1','#f43f5e'];
+
+new Chart(document.getElementById('pieChart'), {
+  type: 'doughnut',
+  data: {
+    labels: catNames,
+    datasets: [{ data: catVals, backgroundColor: colors, borderWidth: 2, borderColor: '#0f0f1a' }]
+  },
+  options: {
+    plugins: {
+      legend: { position: 'bottom', labels: { color: '#fff', font: { size: 11 }, padding: 10, boxWidth: 12 } }
+    },
+    cutout: '55%'
+  }
+});
+
+// Список категорий
+const maxTotal = Math.max(...catVals);
+const catList = document.getElementById('catList');
+const sorted = Object.entries(DATA.categories).sort((a,b) => b[1].total - a[1].total);
+const icons = { 'Еда и доставка':'🍕','Развлечения':'🎮','Такси':'🚕','Переводы':'💸','Вейп':'🚬','Связь':'📱','Прочее':'📦','Подписки':'🔔','Аптека':'💊','Яндекс Дискаунтер':'🏪' };
+
+sorted.forEach(([name, cat]) => {
+  const pct = (cat.total / maxTotal * 100).toFixed(0);
+  const sharePct = (cat.total / 55058 * 100).toFixed(1);
+  catList.innerHTML += `
+    <div class="cat-item">
+      <div class="top">
+        <div class="name">${icons[name]||'•'} ${name}</div>
+        <div class="amount">${cat.total.toLocaleString('ru')} ₽</div>
+      </div>
+      <div class="bar-wrap"><div class="bar" style="width:${pct}%"></div></div>
+      <div class="meta">${cat.count} операций · ${sharePct}% расходов</div>
+    </div>`;
+});
+
+// История операций
+const opsList = document.getElementById('opsList');
+DATA.recent.forEach(op => {
+  opsList.innerHTML += `
+    <div class="op-item">
+      <div>
+        <div class="op-title">${op.title}</div>
+        <div class="op-date">${op.date}</div>
+      </div>
+      <div class="op-amount ${op.dir}">${op.dir === 'in' ? '+' : '−'}${op.amount.toLocaleString('ru')} ₽</div>
+    </div>`;
+});
+</script>
+</body>
+</html>
