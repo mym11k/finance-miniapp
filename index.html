@@ -10,119 +10,54 @@
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
 :root {
-  --bg:      #08080f;
-  --surface: rgba(255,255,255,0.04);
-  --border:  rgba(255,255,255,0.07);
-  --accent:  #6366f1;
-  --green:   #10b981;
-  --red:     #f43f5e;
-  --amber:   #f59e0b;
-  --text:    #ffffff;
-  --muted:   rgba(255,255,255,0.42);
-  --radius:  16px;
+  --bg: #08080f; --surface: rgba(255,255,255,0.04); --border: rgba(255,255,255,0.07);
+  --accent: #6366f1; --green: #10b981; --red: #f43f5e; --amber: #f59e0b;
+  --text: #ffffff; --muted: rgba(255,255,255,0.42); --radius: 16px;
 }
-
-html, body {
-  height: 100%;
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 15px;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
-
+html, body { height: 100%; background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; font-size: 15px; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .app { display: flex; flex-direction: column; min-height: 100vh; }
+.scroll-area { flex: 1; overflow-y: auto; padding: 20px 16px 90px; -webkit-overflow-scrolling: touch; }
 
-.scroll-area {
-  flex: 1;
-  overflow-y: auto;
-  padding: 20px 16px 90px;
-  -webkit-overflow-scrolling: touch;
-}
+/* Loading */
+.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; gap: 16px; }
+.spinner { width: 36px; height: 36px; border: 2px solid rgba(255,255,255,0.1); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { font-size: 13px; color: var(--muted); }
 
 /* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
 .header-title { font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; }
+.header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
 .header-period { font-size: 13px; font-weight: 500; color: var(--muted); }
+.header-updated { font-size: 10px; color: rgba(255,255,255,0.22); }
 
-/* Balance card */
-.balance-card {
-  background: linear-gradient(135deg, rgba(99,102,241,0.18) 0%, rgba(168,85,247,0.12) 100%);
-  border: 1px solid rgba(99,102,241,0.25);
-  border-radius: 24px;
-  padding: 24px 24px 20px;
-  margin-bottom: 10px;
-}
+/* Balance */
+.balance-card { background: linear-gradient(135deg, rgba(99,102,241,0.18) 0%, rgba(168,85,247,0.12) 100%); border: 1px solid rgba(99,102,241,0.25); border-radius: 24px; padding: 24px 24px 20px; margin-bottom: 10px; }
 .balance-label { font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.4px; margin-bottom: 6px; }
-.balance-amount {
-  font-size: 40px; font-weight: 800; letter-spacing: -1.5px;
-  font-variant-numeric: tabular-nums; line-height: 1; margin-bottom: 12px;
-}
+.balance-amount { font-size: 40px; font-weight: 800; letter-spacing: -1.5px; font-variant-numeric: tabular-nums; line-height: 1; margin-bottom: 12px; }
 .balance-amount span { font-size: 22px; font-weight: 600; opacity: 0.55; margin-left: 4px; }
 .balance-meta { font-size: 11px; color: var(--muted); }
 
-/* Stats row */
+/* Stats */
 .stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px; }
-.stat-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-}
+.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
 .stat-label { font-size: 11px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 5px; }
 .stat-value { font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -0.5px; }
-.stat-value.green { color: var(--green); }
-.stat-value.red   { color: var(--red); }
+.stat-value.green { color: var(--green); } .stat-value.red { color: var(--red); }
 .stat-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
 
 /* Section */
 .section { margin-bottom: 24px; }
-.section-label {
-  font-size: 11px; font-weight: 600; color: var(--muted);
-  text-transform: uppercase; letter-spacing: 0.6px;
-  margin-bottom: 12px;
-}
+.section-label { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 12px; }
 
 /* Chart card */
-.chart-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px 14px 14px;
-}
+.chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 14px 14px; }
 .chart-note { font-size: 11px; color: var(--muted); margin-top: 10px; text-align: center; }
+.anomaly-badge { background: rgba(244,63,94,0.1); border: 1px solid rgba(244,63,94,0.2); border-radius: 8px; padding: 10px 14px; margin-top: 10px; font-size: 12px; color: var(--red); display: flex; align-items: center; gap: 8px; }
 
-/* Anomaly badge */
-.anomaly-badge {
-  background: rgba(244,63,94,0.1);
-  border: 1px solid rgba(244,63,94,0.2);
-  border-radius: 8px;
-  padding: 10px 14px;
-  margin-top: 10px;
-  font-size: 12px;
-  color: var(--red);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* Category list */
-.cat-item {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  margin-bottom: 8px;
-  min-height: 44px;
-}
+/* Categories */
+.cat-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 8px; min-height: 44px; }
 .cat-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 9px; }
 .cat-left { display: flex; align-items: center; gap: 10px; }
 .cat-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
@@ -133,429 +68,250 @@ html, body {
 .cat-meta { font-size: 11px; color: var(--muted); }
 
 /* Insight */
-.insight {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 16px;
-  margin-bottom: 10px;
-  border-left: 2px solid transparent;
-}
-.insight.danger  { border-left-color: var(--red); }
-.insight.warn    { border-left-color: var(--amber); }
-.insight.success { border-left-color: var(--green); }
-.insight.info    { border-left-color: var(--accent); }
-
+.insight { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 10px; border-left: 2px solid transparent; }
+.insight.danger { border-left-color: var(--red); } .insight.warn { border-left-color: var(--amber); }
+.insight.success { border-left-color: var(--green); } .insight.info { border-left-color: var(--accent); }
 .insight-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-.insight-icon {
-  width: 30px; height: 30px; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-}
-.danger  .insight-icon { background: rgba(244,63,94,0.12); }
-.warn    .insight-icon { background: rgba(245,158,11,0.12); }
-.success .insight-icon { background: rgba(16,185,129,0.12); }
-.info    .insight-icon { background: rgba(99,102,241,0.12); }
-
+.insight-icon { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.danger .insight-icon { background: rgba(244,63,94,0.12); } .warn .insight-icon { background: rgba(245,158,11,0.12); }
+.success .insight-icon { background: rgba(16,185,129,0.12); } .info .insight-icon { background: rgba(99,102,241,0.12); }
 .insight-title { font-size: 13px; font-weight: 600; }
 .insight-text { font-size: 12px; color: var(--muted); line-height: 1.6; }
 .insight-saving { font-size: 12px; font-weight: 600; color: var(--green); margin-top: 8px; }
-.insight-action {
-  display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600;
-  color: var(--accent); background: rgba(99,102,241,0.1);
-  padding: 5px 10px; border-radius: 20px;
-}
+.insight-action { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; color: var(--accent); background: rgba(99,102,241,0.1); padding: 5px 10px; border-radius: 20px; }
 
-/* Goals / System */
-.level-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 16px;
-  margin-bottom: 10px;
-}
+/* Goals */
+.level-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 10px; }
 .level-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
 .level-name { font-size: 13px; font-weight: 600; }
-.level-status {
-  font-size: 11px; font-weight: 600; padding: 3px 8px;
-  border-radius: 20px;
-}
-.level-status.active   { color: var(--green); background: rgba(16,185,129,0.12); }
-.level-status.waiting  { color: var(--muted); background: rgba(255,255,255,0.06); }
-.level-status.locked   { color: var(--amber); background: rgba(245,158,11,0.1); }
+.level-status { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 20px; }
+.level-status.active { color: var(--green); background: rgba(16,185,129,0.12); }
+.level-status.waiting { color: var(--muted); background: rgba(255,255,255,0.06); }
+.level-status.locked { color: var(--amber); background: rgba(245,158,11,0.1); }
 .level-desc { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
 .level-bar-track { height: 4px; background: rgba(255,255,255,0.07); border-radius: 2px; margin-bottom: 6px; }
 .level-bar-fill { height: 4px; border-radius: 2px; }
 .level-numbers { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); }
 .level-numbers span { font-variant-numeric: tabular-nums; }
+.level-hint { font-size: 11px; color: var(--muted); margin-top: 8px; }
 
-.timeline-item {
-  display: flex; gap: 12px; margin-bottom: 14px;
-}
-.timeline-dot {
-  width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0;
-}
-.timeline-content {}
+.timeline-item { display: flex; gap: 12px; margin-bottom: 14px; }
+.timeline-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
 .timeline-month { font-size: 12px; font-weight: 600; margin-bottom: 2px; }
 .timeline-text { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
 /* History */
-.op-item {
-  display: flex; align-items: center; gap: 12px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border);
-  min-height: 44px;
-}
+.op-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); min-height: 44px; }
 .op-item:last-child { border-bottom: none; }
-.op-icon {
-  width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--surface);
-  border: 1px solid var(--border);
-}
+.op-icon { width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border); }
 .op-info { flex: 1; min-width: 0; }
 .op-title { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.op-date  { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.op-date { font-size: 11px; color: var(--muted); margin-top: 2px; }
 .op-amount { font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.op-amount.in  { color: var(--green); }
-.op-amount.out { color: var(--text); }
+.op-amount.in { color: var(--green); } .op-amount.out { color: var(--text); }
 
 /* Bottom nav */
-.bottom-nav {
-  position: fixed; bottom: 0; left: 0; right: 0;
-  height: 68px;
-  background: rgba(8,8,15,0.94);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid var(--border);
-  display: flex;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-.nav-btn {
-  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 4px; cursor: pointer; border: none; background: none; padding: 0;
-  color: var(--muted); font-size: 9px; font-weight: 500; letter-spacing: 0.3px;
-  font-family: inherit; transition: color 0.15s ease;
-  -webkit-tap-highlight-color: transparent;
-  min-height: 44px;
-}
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; height: 68px; background: rgba(8,8,15,0.94); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-top: 1px solid var(--border); display: flex; padding-bottom: env(safe-area-inset-bottom, 0px); }
+.nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; cursor: pointer; border: none; background: none; padding: 0; color: var(--muted); font-size: 9px; font-weight: 500; letter-spacing: 0.3px; font-family: inherit; transition: color 0.15s ease; -webkit-tap-highlight-color: transparent; min-height: 44px; }
 .nav-btn.active { color: var(--text); }
 .nav-btn svg { width: 20px; height: 20px; }
-.nav-dot {
-  width: 4px; height: 4px; border-radius: 2px;
-  background: var(--accent); margin-top: -2px;
-  opacity: 0; transition: opacity 0.15s ease;
-}
+.nav-dot { width: 4px; height: 4px; border-radius: 2px; background: var(--accent); margin-top: -2px; opacity: 0; transition: opacity 0.15s ease; }
 .nav-btn.active .nav-dot { opacity: 1; }
+.page { display: none; } .page.active { display: block; }
 
-/* Pages */
-.page { display: none; }
-.page.active { display: block; }
-
-@media (prefers-reduced-motion: reduce) {
-  .cat-bar-fill, .level-bar-fill { transition: none; }
-}
+@media (prefers-reduced-motion: reduce) { .cat-bar-fill, .level-bar-fill, .spinner { transition: none; animation: none; } }
 </style>
 </head>
 <body>
 <div class="app">
   <div class="scroll-area" id="scrollArea">
 
-    <!-- Header -->
-    <div class="header">
-      <div class="header-title">Финансы</div>
-      <div class="header-period">Июль 2026</div>
+    <!-- Loading state -->
+    <div id="loadingState" class="loading">
+      <div class="spinner"></div>
+      <div class="loading-text">Загружаем данные ЮМани...</div>
     </div>
 
-    <!-- Balance -->
-    <div class="balance-card">
-      <div class="balance-label">Баланс кошелька</div>
-      <div class="balance-amount">874 <span>₽</span></div>
-      <div class="balance-meta">ЮМани · 4100 1180 8883 1817</div>
-    </div>
+    <!-- Main content (hidden until data loads) -->
+    <div id="mainContent" style="display:none">
 
-    <!-- Stats -->
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-label">Пришло</div>
-        <div class="stat-value green">55 749</div>
-        <div class="stat-sub">30 операций</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Ушло</div>
-        <div class="stat-value red">55 058</div>
-        <div class="stat-sub">70 операций</div>
-      </div>
-    </div>
-
-    <!-- OVERVIEW -->
-    <div class="page active" id="page-overview">
-      <div class="section">
-        <div class="section-label">Расходы по дням</div>
-        <div class="chart-card">
-          <canvas id="barChart" height="160"></canvas>
-          <div class="anomaly-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg>
-            12 июля — выброс 18 566 ₽. Яндекс Лавка × 3 + Playerok + перевод 2 620 ₽
-          </div>
+      <div class="header">
+        <div class="header-title">Финансы</div>
+        <div class="header-right">
+          <div class="header-period" id="hPeriod">—</div>
+          <div class="header-updated" id="hUpdated">—</div>
         </div>
       </div>
-      <div class="section">
-        <div class="section-label">Структура расходов</div>
-        <div class="chart-card" style="padding-bottom:18px;">
-          <canvas id="donutChart" height="220"></canvas>
-          <div class="chart-note">Еда и доставка — 61% всех расходов</div>
+
+      <div class="balance-card">
+        <div class="balance-label">Баланс кошелька</div>
+        <div class="balance-amount" id="bBalance">— <span>₽</span></div>
+        <div class="balance-meta">ЮМани · 4100 1180 8883 1817</div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-label">Пришло</div>
+          <div class="stat-value green" id="sIncome">—</div>
+          <div class="stat-sub" id="sIncomeCount">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Ушло</div>
+          <div class="stat-value red" id="sExpense">—</div>
+          <div class="stat-sub" id="sExpenseCount">—</div>
         </div>
       </div>
-    </div>
 
-    <!-- CATEGORIES -->
-    <div class="page" id="page-categories">
-      <div class="section">
-        <div class="section-label">По категориям</div>
-        <div id="catList"></div>
-      </div>
-    </div>
-
-    <!-- INSIGHTS / AI -->
-    <div class="page" id="page-insights">
-      <div class="section">
-        <div class="section-label">AI-анализ · Quant + Risk</div>
-
-        <div class="insight danger">
-          <div class="insight-head">
-            <div class="insight-icon">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <!-- OVERVIEW -->
+      <div class="page active" id="page-overview">
+        <div class="section">
+          <div class="section-label">Расходы и доходы по дням</div>
+          <div class="chart-card">
+            <canvas id="barChart" height="160"></canvas>
+            <div class="anomaly-badge" id="anomalyBadge" style="display:none">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg>
+              <span id="anomalyText"></span>
             </div>
-            <div class="insight-title">Еда и доставка — 61% бюджета</div>
-          </div>
-          <div class="insight-text">33 804 ₽ за месяц. Яндекс Лавка — главная статья: 7–8 доставок по 1 900–3 800 ₽. Те же продукты в Пятерочке или Магните — на 35–50% дешевле без наценки за скорость.</div>
-          <div class="insight-saving">Потенциал: −13 000 ₽/мес → 156 000 ₽/год</div>
-          <div class="insight-action">Переключиться на офлайн-магазины</div>
-        </div>
-
-        <div class="insight danger">
-          <div class="insight-head">
-            <div class="insight-icon">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 10v4M7 12h4"/><circle cx="15" cy="12" r="1" fill="#f43f5e"/><circle cx="17" cy="10" r="1" fill="#f43f5e"/></svg>
-            </div>
-            <div class="insight-title">Playerok — 4 690 ₽ за 2 покупки</div>
-          </div>
-          <div class="insight-text">Два списания по 2 345 ₽ за 2 дня подряд. Без лимита на игровые покупки ты теряешь 4–5% бюджета моментально. Игры — часть жизни, но нужна граница.</div>
-          <div class="insight-saving">Лимит 1 500 ₽/мес → экономия 3 000+ ₽</div>
-          <div class="insight-action">Поставить месячный лимит</div>
-        </div>
-
-        <div class="insight warn">
-          <div class="insight-head">
-            <div class="insight-icon">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <div class="insight-title">Такси — 17 поездок, 4 655 ₽</div>
-          </div>
-          <div class="insight-text">Средняя поездка 274 ₽, почти каждый день. Часть маршрутов заменима самокатом, метро или пешком. Даже −5 поездок в неделю дают ощутимую экономию.</div>
-          <div class="insight-saving">−30% поездок → экономия ~1 500 ₽/мес</div>
-        </div>
-
-        <div class="insight warn">
-          <div class="insight-head">
-            <div class="insight-icon">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3"/></svg>
-            </div>
-            <div class="insight-title">Два тарифа связи — Т-Мобайл + t2</div>
-          </div>
-          <div class="insight-text">5 списаний на мобильную связь. Два оператора в одном устройстве: один можно убрать или перевести на минимальный тариф.</div>
-          <div class="insight-saving">Экономия: 600–1 200 ₽/мес</div>
-        </div>
-
-        <div class="insight warn">
-          <div class="insight-head">
-            <div class="insight-icon">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-            </div>
-            <div class="insight-title">Вейп — 2 937 ₽ за 2 покупки</div>
-          </div>
-          <div class="insight-text">5.3% бюджета на табачку. Это 35 000+ ₽/год если ритм сохранится. Риск двойной — здоровье и деньги одновременно.</div>
-          <div class="insight-saving">Отказ = +35 000 ₽/год в резерв</div>
-        </div>
-
-        <div class="insight info">
-          <div class="insight-head">
-            <div class="insight-icon">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-            </div>
-            <div class="insight-title">Аномалия 12 июля — 18 566 ₽ за день</div>
-          </div>
-          <div class="insight-text">Самый дорогой день месяца: 3 доставки Яндекс Лавки + Playerok + перевод 2 620 ₽. Такие дни "убивают" месячный бюджет. Нужен дневной лимит трат.</div>
-          <div class="insight-action">Дневной лимит: 3 000 ₽</div>
-        </div>
-
-        <div class="insight success">
-          <div class="insight-head">
-            <div class="insight-icon">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div class="insight-title">Итого можно перенаправить в резерв</div>
-          </div>
-          <div class="insight-text">Лавка → магазин: −13 000 ₽<br>Playerok лимит: −3 000 ₽<br>Такси реже: −1 500 ₽<br>Один тариф связи: −900 ₽</div>
-          <div class="insight-saving">Итого: ~18 400 ₽/мес → резерв за 21 месяц</div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- GOALS / СИСТЕМА -->
-    <div class="page" id="page-goals">
-      <div class="section">
-        <div class="section-label">Система · 4 уровня</div>
-
-        <!-- ЗАЩИТА -->
-        <div class="level-card">
-          <div class="level-head">
-            <div class="level-name">🛡 Защита — Резерв</div>
-            <div class="level-status active">Активен</div>
-          </div>
-          <div class="level-desc">6 месяцев фактических расходов на накопительном счёте. По данным ЮМани: 55 058 ₽/мес × 6 = 330 000 ₽. Не трогать.</div>
-          <div class="level-bar-track">
-            <div class="level-bar-fill" style="width:0%;background:linear-gradient(90deg,#10b981,#34d399)"></div>
-          </div>
-          <div class="level-numbers">
-            <span>0 ₽</span>
-            <span>цель: 330 000 ₽</span>
-          </div>
-          <div style="font-size:11px;color:var(--muted);margin-top:8px;">Сейчас остаток: +690 ₽/мес. После оптимизации: ~22 месяца до цели</div>
-        </div>
-
-        <!-- ОСНОВА -->
-        <div class="level-card">
-          <div class="level-head">
-            <div class="level-name">📈 Основа — Портфель</div>
-            <div class="level-status waiting">Ждёт</div>
-          </div>
-          <div class="level-desc">Долгосрочный портфель: дивидендные акции РФ 40% + фонды роста 40% + ОФЗ 20%. Пополнение 10 000 ₽/мес.</div>
-          <div class="level-bar-track">
-            <div class="level-bar-fill" style="width:0%;background:linear-gradient(90deg,#6366f1,#a855f7)"></div>
-          </div>
-          <div class="level-numbers">
-            <span>0 ₽</span>
-            <span>старт после резерва</span>
-          </div>
-          <div style="font-size:11px;color:var(--muted);margin-top:8px;">Брокер: выбрать из Т-Инвестиции / Финам / Альфа</div>
-        </div>
-
-        <!-- УСКОРИТЕЛИ -->
-        <div class="level-card">
-          <div class="level-head">
-            <div class="level-name">⚡ Ускорители — Риск</div>
-            <div class="level-status locked">Заблокирован</div>
-          </div>
-          <div class="level-desc">Активная крипта (BTC 60%, ETH 25%, alt 15%) + частные проекты. Только 5–10% от капитала. Правило: +50% → фиксируй часть.</div>
-          <div class="level-bar-track">
-            <div class="level-bar-fill" style="width:0%;background:linear-gradient(90deg,#f59e0b,#f97316)"></div>
-          </div>
-          <div class="level-numbers">
-            <span>0 ₽</span>
-            <span>после портфеля 500 000 ₽</span>
           </div>
         </div>
-
-        <!-- ЦЕЛИ -->
-        <div class="level-card">
-          <div class="level-head">
-            <div class="level-name">🎯 Цели — Капитал</div>
-            <div class="level-status locked">Заблокирован</div>
-          </div>
-          <div class="level-desc">Машина капитала: 10 млн ₽ → 70–80 тыс./мес пассивного дохода. 40% реинвест, 30% на квартиру, 20% жизнь.</div>
-          <div class="level-bar-track">
-            <div class="level-bar-fill" style="width:0%;background:linear-gradient(90deg,#ec4899,#6366f1)"></div>
-          </div>
-          <div class="level-numbers">
-            <span>0 ₽</span>
-            <span>цель: 10 000 000 ₽</span>
+        <div class="section">
+          <div class="section-label">Структура расходов</div>
+          <div class="chart-card" style="padding-bottom:18px;">
+            <canvas id="donutChart" height="220"></canvas>
+            <div class="chart-note" id="donutNote"></div>
           </div>
         </div>
       </div>
 
-      <div class="section">
-        <div class="section-label">Дорожная карта</div>
-        <div class="timeline-item">
-          <div class="timeline-dot" style="background:var(--green)"></div>
-          <div class="timeline-content">
-            <div class="timeline-month">Сейчас — Авг 2026</div>
-            <div class="timeline-text">Факт по ЮМани: доход 55 749 ₽, расход 55 058 ₽, остаток 690 ₽. Первый шаг — перевести Лавку в офлайн и поставить лимит на игры. Открыть накопительный счёт, автоперевод 5 000 ₽ с каждого поступления.</div>
+      <!-- CATEGORIES -->
+      <div class="page" id="page-categories">
+        <div class="section">
+          <div class="section-label">По категориям</div>
+          <div id="catList"></div>
+        </div>
+      </div>
+
+      <!-- AI INSIGHTS -->
+      <div class="page" id="page-insights">
+        <div class="section">
+          <div class="section-label">AI-анализ · Quant + Risk</div>
+          <div id="insightsList"></div>
+        </div>
+      </div>
+
+      <!-- SYSTEM / GOALS -->
+      <div class="page" id="page-goals">
+        <div class="section">
+          <div class="section-label">Система · 4 уровня</div>
+
+          <div class="level-card">
+            <div class="level-head">
+              <div class="level-name">🛡 Защита — Резерв</div>
+              <div class="level-status active">Активен</div>
+            </div>
+            <div class="level-desc" id="lvl1Desc">6 месяцев фактических расходов на накопительном счёте. Не трогать.</div>
+            <div class="level-bar-track"><div class="level-bar-fill" id="lvl1Bar" style="width:0%;background:linear-gradient(90deg,#10b981,#34d399)"></div></div>
+            <div class="level-numbers"><span id="lvl1Cur">0 ₽</span><span id="lvl1Target">цель: —</span></div>
+            <div class="level-hint" id="lvl1Hint"></div>
+          </div>
+
+          <div class="level-card">
+            <div class="level-head">
+              <div class="level-name">📈 Основа — Портфель</div>
+              <div class="level-status waiting">Ждёт</div>
+            </div>
+            <div class="level-desc">Дивидендные акции РФ 40% + фонды роста 40% + ОФЗ 20%. Пополнение 10 000 ₽/мес после формирования резерва.</div>
+            <div class="level-bar-track"><div class="level-bar-fill" style="width:0%;background:linear-gradient(90deg,#6366f1,#a855f7)"></div></div>
+            <div class="level-numbers"><span>0 ₽</span><span>после резерва</span></div>
+            <div class="level-hint">Брокер: Т-Инвестиции / Финам / Альфа</div>
+          </div>
+
+          <div class="level-card">
+            <div class="level-head">
+              <div class="level-name">⚡ Ускорители — Риск</div>
+              <div class="level-status locked">Заблокирован</div>
+            </div>
+            <div class="level-desc">BTC 60%, ETH 25%, алты 15% + частные проекты. Только 5–10% капитала. Правило: +50% → фиксируй, x2 → верни тело.</div>
+            <div class="level-bar-track"><div class="level-bar-fill" style="width:0%;background:linear-gradient(90deg,#f59e0b,#f97316)"></div></div>
+            <div class="level-numbers"><span>0 ₽</span><span>после портфеля 500 000 ₽</span></div>
+          </div>
+
+          <div class="level-card">
+            <div class="level-head">
+              <div class="level-name">🎯 Цели — 10 млн ₽</div>
+              <div class="level-status locked">Заблокирован</div>
+            </div>
+            <div class="level-desc">10 млн ₽ → 70–80 тыс./мес пассивно. 40% реинвест + 30% на квартиру + 20% жизнь + 10% резерв.</div>
+            <div class="level-bar-track"><div class="level-bar-fill" style="width:0%;background:linear-gradient(90deg,#ec4899,#6366f1)"></div></div>
+            <div class="level-numbers"><span>0 ₽</span><span>цель: 10 000 000 ₽</span></div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot" style="background:var(--accent)"></div>
-          <div class="timeline-content">
-            <div class="timeline-month">Окт 2026 — Июн 2028</div>
-            <div class="timeline-text">Накопить резерв 330 000 ₽ (~22 мес при экономии 15 000+/мес от оптимизации). Параллельно: 5 000–10 000 ₽/мес в базовый портфель.</div>
+
+        <div class="section">
+          <div class="section-label">Дорожная карта</div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--green)"></div>
+            <div>
+              <div class="timeline-month">Сейчас</div>
+              <div class="timeline-text" id="tlNow">Оптимизировать расходы. Открыть накопительный счёт. Автоперевод 5 000 ₽ с каждого поступления.</div>
+            </div>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot" style="background:var(--amber)"></div>
-          <div class="timeline-content">
-            <div class="timeline-month">2028 — 2031</div>
-            <div class="timeline-text">Резерв готов → весь свободный поток в портфель. Прогноз через 5 лет: базовый сценарий 1,1–1,25 млн ₽.</div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--accent)"></div>
+            <div>
+              <div class="timeline-month" id="tlMonth2">— 2028</div>
+              <div class="timeline-text" id="tlText2">Накопить резерв. Параллельно: 5–10 тыс./мес в базовый портфель.</div>
+            </div>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot" style="background:var(--red)"></div>
-          <div class="timeline-content">
-            <div class="timeline-month">2031+</div>
-            <div class="timeline-text">Портфель 500 000 ₽+ → добавить ускорители (крипта 5%). Реинвестировать дивиденды. Двигаться к 10 млн.</div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--amber)"></div>
+            <div>
+              <div class="timeline-month">2028 — 2031</div>
+              <div class="timeline-text">Резерв готов → весь свободный поток в портфель. Базовый сценарий через 5 лет: 1,1–1,25 млн ₽.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--red)"></div>
+            <div>
+              <div class="timeline-month">2031+</div>
+              <div class="timeline-text">Портфель 500 000 ₽+ → добавить ускорители (крипта 5%). Реинвестировать дивиденды. Двигаться к 10 млн.</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- HISTORY -->
-    <div class="page" id="page-history">
-      <div class="section">
-        <div class="section-label">Последние операции</div>
-        <div class="chart-card" style="padding:0 16px;" id="opsList"></div>
+      <!-- HISTORY -->
+      <div class="page" id="page-history">
+        <div class="section">
+          <div class="section-label">Последние операции</div>
+          <div class="chart-card" style="padding:0 16px;" id="opsList"></div>
+        </div>
       </div>
-    </div>
 
-  </div><!-- /scroll-area -->
+    </div><!-- /mainContent -->
+  </div>
 
   <!-- Bottom Nav -->
-  <nav class="bottom-nav">
+  <nav class="bottom-nav" id="bottomNav" style="display:none">
     <button class="nav-btn active" onclick="showPage('overview', this)" aria-label="Обзор">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-        <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
-        <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
-      </svg>
-      <div class="nav-dot"></div>
-      Обзор
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      <div class="nav-dot"></div>Обзор
     </button>
     <button class="nav-btn" onclick="showPage('categories', this)" aria-label="Категории">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-        <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/>
-        <circle cx="3" cy="6" r="1" fill="currentColor"/><circle cx="3" cy="12" r="1" fill="currentColor"/><circle cx="3" cy="18" r="1" fill="currentColor"/>
-      </svg>
-      <div class="nav-dot"></div>
-      Категории
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="3" cy="6" r="1" fill="currentColor"/><circle cx="3" cy="12" r="1" fill="currentColor"/><circle cx="3" cy="18" r="1" fill="currentColor"/></svg>
+      <div class="nav-dot"></div>Категории
     </button>
-    <button class="nav-btn" onclick="showPage('insights', this)" aria-label="AI анализ">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-        <path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17H8v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"/>
-      </svg>
-      <div class="nav-dot"></div>
-      AI
+    <button class="nav-btn" onclick="showPage('insights', this)" aria-label="AI">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17H8v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"/></svg>
+      <div class="nav-dot"></div>AI
     </button>
     <button class="nav-btn" onclick="showPage('goals', this)" aria-label="Система">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-        <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
-      </svg>
-      <div class="nav-dot"></div>
-      Система
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+      <div class="nav-dot"></div>Система
     </button>
     <button class="nav-btn" onclick="showPage('history', this)" aria-label="История">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
-        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-      </svg>
-      <div class="nav-dot"></div>
-      История
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div class="nav-dot"></div>История
     </button>
   </nav>
 </div>
@@ -563,48 +319,11 @@ html, body {
 <script>
 if (window.Telegram?.WebApp) { Telegram.WebApp.ready(); Telegram.WebApp.expand(); }
 
-// ── Real data from YooMoney API (July 2026) ──
-const CATS = [
-  { name: "Еда и доставка", total: 33804, count: 30, color: '#6366f1' },
-  { name: "Игры",           total: 4690,  count: 2,  color: '#8b5cf6' },
-  { name: "Такси",          total: 4655,  count: 17, color: '#a855f7' },
-  { name: "Переводы",       total: 4386,  count: 5,  color: '#ec4899' },
-  { name: "Вейп / табак",   total: 2937,  count: 2,  color: '#f43f5e' },
-  { name: "Связь",          total: 2393,  count: 8,  color: '#f97316' },
-  { name: "Подписки",       total: 1117,  count: 3,  color: '#eab308' },
-  { name: "Кафе",           total: 590,   count: 1,  color: '#06b6d4' },
-  { name: "Здоровье",       total: 147,   count: 1,  color: '#10b981' },
-  { name: "Прочее",         total: 339,   count: 1,  color: '#64748b' },
-];
+const PALETTE = ['#6366f1','#8b5cf6','#a855f7','#ec4899','#f43f5e','#f97316','#eab308','#06b6d4','#10b981','#64748b'];
+let barChartInst = null, donutChartInst = null;
 
-const DAYS = ["01","02","03","05","06","07","08","11","12","13","14","15","21","22","23","24","25","26","27"];
-const IN   = [289, 2200, 3000, 5000, 300, 5198, 0, 15600, 10490, 171, 0, 0, 1500, 1500, 0, 1000, 0, 4500, 5000];
-const OUT  = [192, 2437, 2993, 4905, 334, 4413, 764, 4709, 18565, 0, 1899, 1160, 1398, 715, 901, 871, 146, 3835, 4813];
+function fmt(n) { return Math.round(n).toLocaleString('ru'); }
 
-const OPS = [
-  { title: "ПЯТЕРОЧКА 9991",         amount: 2023.73, date: "27 июл", dir: "out" },
-  { title: "Перевод: SBOL",          amount: 1000,    date: "27 июл", dir: "in"  },
-  { title: "PLAYEROK",               amount: 2344.98, date: "27 июл", dir: "out" },
-  { title: "Перевод: SBOL",          amount: 2500,    date: "27 июл", dir: "in"  },
-  { title: "Перевод: OMP",           amount: 1500,    date: "27 июл", dir: "in"  },
-  { title: "Северок",                amount: 445,     date: "27 июл", dir: "out" },
-  { title: "YANDEX FASTEN",          amount: 464,     date: "26 июл", dir: "out" },
-  { title: "Бар СКВОТ летник",       amount: 340,     date: "26 июл", dir: "out" },
-  { title: "IVI.RU",                 amount: 399,     date: "26 июл", dir: "out" },
-  { title: "YANDEX FASTEN",          amount: 288,     date: "26 июл", dir: "out" },
-  { title: "Playerok",               amount: 2344.98, date: "26 июл", dir: "out" },
-  { title: "Перевод: SBOL",          amount: 2000,    date: "26 июл", dir: "in"  },
-  { title: "Перевод: SBOL",          amount: 1500,    date: "26 июл", dir: "in"  },
-  { title: "Аптека 1449",            amount: 146.52,  date: "25 июл", dir: "out" },
-  { title: "Северок",                amount: 205,     date: "24 июл", dir: "out" },
-  { title: "YANDEX FASTEN",          amount: 239,     date: "24 июл", dir: "out" },
-  { title: "КРАСНОЕ & БЕЛОЕ",        amount: 138.69,  date: "24 июл", dir: "out" },
-  { title: "YANDEX FASTEN",          amount: 289,     date: "24 июл", dir: "out" },
-  { title: "Перевод: SBOL",          amount: 1000,    date: "24 июл", dir: "in"  },
-  { title: "DODO PIZZA CHELYABINSK", amount: 901,     date: "23 июл", dir: "out" },
-];
-
-// ── Navigation ──
 function showPage(name, btn) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -613,159 +332,261 @@ function showPage(name, btn) {
   document.getElementById('scrollArea').scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── Bar Chart ──
-const barCtx = document.getElementById('barChart').getContext('2d');
-new Chart(barCtx, {
-  type: 'bar',
-  data: {
-    labels: DAYS,
-    datasets: [
-      {
-        label: 'Пришло',
-        data: IN,
-        backgroundColor: 'rgba(16,185,129,0.22)',
-        borderColor: 'rgba(16,185,129,0.55)',
-        borderWidth: 1,
-        borderRadius: 4,
-      },
-      {
-        label: 'Ушло',
-        data: OUT,
-        backgroundColor: OUT.map(v => v === 18565 ? 'rgba(244,63,94,0.45)' : 'rgba(244,63,94,0.18)'),
-        borderColor: OUT.map(v => v === 18565 ? 'rgba(244,63,94,0.9)' : 'rgba(244,63,94,0.45)'),
-        borderWidth: 1,
-        borderRadius: 4,
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        labels: { color: 'rgba(255,255,255,0.4)', font: { family: 'Inter', size: 10 }, boxWidth: 8, padding: 10 }
-      },
-      tooltip: {
-        callbacks: {
-          label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString('ru')} ₽`
-        }
-      }
-    },
-    scales: {
-      x: {
-        ticks: { color: 'rgba(255,255,255,0.28)', font: { size: 9 } },
-        grid: { display: false },
-        border: { display: false }
-      },
-      y: {
-        ticks: {
-          color: 'rgba(255,255,255,0.28)',
-          font: { size: 9 },
-          callback: v => v >= 1000 ? (v/1000).toFixed(0) + 'k' : v
-        },
-        grid: { color: 'rgba(255,255,255,0.04)' },
-        border: { display: false }
-      }
-    }
-  }
-});
-
-// ── Donut Chart ──
-const donutCtx = document.getElementById('donutChart').getContext('2d');
-new Chart(donutCtx, {
-  type: 'doughnut',
-  data: {
-    labels: CATS.map(c => c.name),
-    datasets: [{
-      data: CATS.map(c => c.total),
-      backgroundColor: CATS.map(c => c.color),
-      borderColor: '#08080f',
-      borderWidth: 3,
-      hoverOffset: 6
-    }]
-  },
-  options: {
-    cutout: '60%',
-    plugins: {
-      legend: {
-        position: 'bottom',
-        labels: {
-          color: 'rgba(255,255,255,0.5)',
-          font: { family: 'Inter', size: 10 },
-          padding: 10, boxWidth: 8
-        }
-      },
-      tooltip: {
-        callbacks: {
-          label: ctx => ` ${ctx.parsed.toLocaleString('ru')} ₽ (${(ctx.parsed/55058*100).toFixed(1)}%)`
-        }
-      }
-    }
-  }
-});
-
-// ── Category list ──
-const maxTotal = Math.max(...CATS.map(c => c.total));
-const catList = document.getElementById('catList');
-CATS.forEach(cat => {
-  const pct = (cat.total / maxTotal * 100).toFixed(0);
-  const share = (cat.total / 55058 * 100).toFixed(1);
-  catList.innerHTML += `
-    <div class="cat-item">
-      <div class="cat-top">
-        <div class="cat-left">
-          <div class="cat-dot" style="background:${cat.color}"></div>
-          <div class="cat-name">${cat.name}</div>
-        </div>
-        <div class="cat-amount">${cat.total.toLocaleString('ru')} ₽</div>
-      </div>
-      <div class="cat-bar-track">
-        <div class="cat-bar-fill" style="width:${pct}%;background:${cat.color}"></div>
-      </div>
-      <div class="cat-meta">${cat.count} операций · ${share}% расходов</div>
-    </div>`;
-});
-
-// ── Op icons ──
 function getOpIcon(title, dir) {
   const t = title.toLowerCase();
-  let stroke = dir === 'in' ? '#10b981' : 'rgba(255,255,255,0.35)';
+  const stroke = dir === 'in' ? '#10b981' : 'rgba(255,255,255,0.35)';
   let path;
-  if (t.includes('lavka') || t.includes('лавка') || t.includes('пятерочка') || t.includes('северок') || t.includes('продукт') || t.includes('красное') || t.includes('магазин'))
+  if (/lavka|лавка|пятерочка|северок|продукт|красное|магазин|spar|ашан|лента|fixprice|окей|перекресток/.test(t))
     path = '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>';
-  else if (t.includes('fasten') || t.includes('taxi'))
+  else if (/fasten|taxi|uber|такси/.test(t))
     path = '<circle cx="12" cy="12" r="10"/><path d="M5 17l2-5h10l2 5M12 6v6"/>';
-  else if (t.includes('playerok') || t.includes('player') || t.includes('steam'))
+  else if (/playerok|player|steam|playstation|xbox/.test(t))
     path = '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 10v4M7 12h4"/><circle cx="15" cy="12" r="1" fill="currentColor"/><circle cx="17" cy="10" r="1" fill="currentColor"/>';
-  else if (t.includes('sbol') || t.includes('omp') || t.includes('перевод'))
+  else if (/sbol|omp|перевод/.test(t))
     path = '<path d="M7 17L17 7M7 7h10v10"/>';
-  else if (t.includes('pizza') || t.includes('dodo') || t.includes('бар') || t.includes('сквот') || t.includes('кафе'))
+  else if (/pizza|dodo|бар|сквот|кафе|kfc|кофе|burger/.test(t))
     path = '<circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>';
-  else if (t.includes('ivi') || t.includes('yandex*360') || t.includes('360'))
+  else if (/ivi|okko|360|netflix|spotify/.test(t))
     path = '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>';
-  else if (t.includes('vape') || t.includes('вейп'))
+  else if (/vape|вейп|кальян/.test(t))
     path = '<path d="M3 12a9 9 0 1018 0M12 2v4M4.93 4.93l2.83 2.83M17.07 4.93l-2.83 2.83"/>';
-  else if (t.includes('мобайл') || t.includes('t2') || t.includes('intersvyaz') || t.includes('аптека'))
+  else if (/мобайл|t2|intersvyaz|аптека|pharmacy/.test(t))
     path = '<rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3"/>';
+  else if (/ozon|wildberries|алиэкспресс|lamoda|авито/.test(t))
+    path = '<rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>';
   else
     path = '<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>';
   return `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="${stroke}" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">${path}</svg>`;
 }
 
-const opsList = document.getElementById('opsList');
-OPS.forEach(op => {
-  const sign = op.dir === 'in' ? '+' : '−';
-  const cls  = op.dir === 'in' ? 'in' : 'out';
-  const fmt  = op.amount % 1 ? op.amount.toLocaleString('ru', {minimumFractionDigits: 2}) : op.amount.toLocaleString('ru');
-  opsList.innerHTML += `
-    <div class="op-item">
-      <div class="op-icon">${getOpIcon(op.title, op.dir)}</div>
-      <div class="op-info">
-        <div class="op-title">${op.title}</div>
-        <div class="op-date">${op.date}</div>
-      </div>
-      <div class="op-amount ${cls}">${sign}${fmt} ₽</div>
-    </div>`;
-});
+function buildInsights(d) {
+  const insights = [];
+  const expTotal = d.expense_total;
+  const incTotal = d.income_total;
+  const net = d.net;
+
+  // Find top categories
+  const cats = d.categories || [];
+  const topCat = cats[0];
+  const food = cats.find(c => c.name === 'Еда и доставка');
+  const games = cats.find(c => c.name === 'Игры');
+  const taxi = cats.find(c => c.name === 'Такси');
+  const vape = cats.find(c => c.name === 'Вейп / табак');
+  const comm = cats.find(c => c.name === 'Связь');
+
+  // Find spending anomaly day
+  const maxOut = Math.max(...d.expense_by_day);
+  const maxDay = d.days[d.expense_by_day.indexOf(maxOut)];
+
+  // Net balance alert
+  if (net < 0) {
+    insights.push({ cls: 'danger', icon: '⚠', title: `Минус ${fmt(Math.abs(net))} ₽ за месяц`, text: `Расходы превышают доходы на ${fmt(Math.abs(net))} ₽. Резерв невозможно накопить при отрицательном балансе. Нужно срочно сократить траты.`, saving: null });
+  } else if (net < 5000) {
+    insights.push({ cls: 'warn', icon: '💡', title: `Остаток всего ${fmt(net)} ₽`, text: `Фактически живёшь в ноль. Из ${fmt(incTotal)} ₽ дохода тратишь ${fmt(expTotal)} ₽ — остаётся ${fmt(net)} ₽. В резерв не попадает ничего.`, saving: 'Цель: перенаправить 15 000+ ₽/мес на накопительный счёт' });
+  }
+
+  // Food insight
+  if (food) {
+    const pct = (food.total / expTotal * 100).toFixed(0);
+    const saving = Math.round(food.total * 0.4);
+    insights.push({ cls: 'danger', svgPath: '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>', color: '#f43f5e',
+      title: `Еда и доставка — ${pct}% бюджета`,
+      text: `${fmt(food.total)} ₽ за ${food.count} операций. Яндекс Лавка — основная статья. Те же продукты в офлайн-магазине дешевле на 35–50%.`,
+      saving: `Потенциал: −${fmt(saving)} ₽/мес → ${fmt(saving * 12)} ₽/год`,
+      action: 'Переключиться на Пятерочку / Магнит' });
+  }
+
+  // Anomaly day
+  if (maxOut > expTotal * 0.2) {
+    insights.push({ cls: 'info', svgPath: '<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/>', color: '#6366f1',
+      title: `Аномалия ${maxDay} числа — ${fmt(maxOut)} ₽ за день`,
+      text: `${(maxOut / expTotal * 100).toFixed(0)}% месячного бюджета улетело в один день. Нужен дневной лимит трат — это точка контроля.`,
+      action: 'Дневной лимит: 3 000 ₽' });
+  }
+
+  // Games
+  if (games && games.total > 2000) {
+    insights.push({ cls: 'danger', svgPath: '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 10v4M7 12h4"/><circle cx="15" cy="12" r="1" fill="currentColor"/><circle cx="17" cy="10" r="1" fill="currentColor"/>', color: '#f43f5e',
+      title: `Игры — ${fmt(games.total)} ₽ (${games.count} покупки)`,
+      text: `${(games.total / expTotal * 100).toFixed(1)}% бюджета. Поставь лимит 1 500 ₽/мес — игры остаются, расход под контролем.`,
+      saving: `Лимит 1 500 ₽ → экономия ${fmt(games.total - 1500)} ₽/мес` });
+  }
+
+  // Taxi
+  if (taxi && taxi.total > 2000) {
+    const avg = Math.round(taxi.total / taxi.count);
+    insights.push({ cls: 'warn', svgPath: '<circle cx="12" cy="12" r="10"/><path d="M5 17l2-5h10l2 5M12 6v6"/>', color: '#f59e0b',
+      title: `Такси — ${taxi.count} поездок, ${fmt(taxi.total)} ₽`,
+      text: `Средняя поездка ${fmt(avg)} ₽. Почти каждый день. Часть маршрутов заменима самокатом, метро или пешком.`,
+      saving: `−30% поездок → экономия ${fmt(Math.round(taxi.total * 0.3))} ₽/мес` });
+  }
+
+  // Vape
+  if (vape && vape.total > 1000) {
+    insights.push({ cls: 'warn', svgPath: '<path d="M3 12a9 9 0 1018 0M12 2v4M4.93 4.93l2.83 2.83M17.07 4.93l-2.83 2.83"/>', color: '#f59e0b',
+      title: `Вейп / табак — ${fmt(vape.total)} ₽`,
+      text: `${(vape.total / expTotal * 100).toFixed(1)}% бюджета. Годовой расход: ${fmt(vape.total * 12)} ₽. Двойной риск — деньги и здоровье.`,
+      saving: `Отказ = +${fmt(vape.total * 12)} ₽/год в резерв` });
+  }
+
+  // Reserve timeline
+  const monthsToReserve = net > 0 ? Math.ceil(d.reserve_target / net) : null;
+  const optimizedSaving = net + Math.round((food ? food.total * 0.4 : 0) + (games ? Math.max(0, games.total - 1500) : 0) + (taxi ? taxi.total * 0.3 : 0));
+  const optimizedMonths = optimizedSaving > 0 ? Math.ceil(d.reserve_target / optimizedSaving) : null;
+
+  insights.push({ cls: 'success', svgPath: '<polyline points="20 6 9 17 4 12"/>', color: '#10b981',
+    title: 'Итого можно перенаправить в резерв',
+    text: [
+      food ? `Еда офлайн: −${fmt(Math.round(food.total * 0.4))} ₽` : null,
+      games && games.total > 1500 ? `Лимит игр: −${fmt(games.total - 1500)} ₽` : null,
+      taxi ? `Такси −30%: −${fmt(Math.round(taxi.total * 0.3))} ₽` : null,
+      vape ? `Вейп: −${fmt(vape.total)} ₽` : null,
+    ].filter(Boolean).join('<br>'),
+    saving: optimizedMonths
+      ? `Итого ~${fmt(optimizedSaving)} ₽/мес → резерв за ${optimizedMonths} мес`
+      : `Резерв цель: ${fmt(d.reserve_target)} ₽` });
+
+  return insights;
+}
+
+function renderInsightSVG(item) {
+  if (!item.svgPath) return '';
+  return `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="${item.color || '#fff'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${item.svgPath}</svg>`;
+}
+
+function render(d) {
+  // Header
+  document.getElementById('hPeriod').textContent = d.period || '—';
+  document.getElementById('hUpdated').textContent = 'обновлено ' + (d.updated || '—');
+
+  // Balance
+  const balStr = fmt(d.balance || 0);
+  document.getElementById('bBalance').innerHTML = balStr + ' <span>₽</span>';
+
+  // Stats
+  document.getElementById('sIncome').textContent = fmt(d.income_total);
+  document.getElementById('sIncomeCount').textContent = d.income_count + ' операций';
+  document.getElementById('sExpense').textContent = fmt(d.expense_total);
+  document.getElementById('sExpenseCount').textContent = d.expense_count + ' операций';
+
+  // Bar chart
+  const outMax = Math.max(...d.expense_by_day);
+  const outBgColors = d.expense_by_day.map(v => v === outMax && v > d.expense_total * 0.2 ? 'rgba(244,63,94,0.5)' : 'rgba(244,63,94,0.18)');
+  const outBorderColors = d.expense_by_day.map(v => v === outMax && v > d.expense_total * 0.2 ? 'rgba(244,63,94,0.95)' : 'rgba(244,63,94,0.45)');
+
+  if (barChartInst) barChartInst.destroy();
+  barChartInst = new Chart(document.getElementById('barChart').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: d.days,
+      datasets: [
+        { label: 'Пришло', data: d.income_by_day, backgroundColor: 'rgba(16,185,129,0.22)', borderColor: 'rgba(16,185,129,0.55)', borderWidth: 1, borderRadius: 4 },
+        { label: 'Ушло', data: d.expense_by_day, backgroundColor: outBgColors, borderColor: outBorderColors, borderWidth: 1, borderRadius: 4 }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { labels: { color: 'rgba(255,255,255,0.4)', font: { family: 'Inter', size: 10 }, boxWidth: 8, padding: 10 } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${fmt(ctx.parsed.y)} ₽` } }
+      },
+      scales: {
+        x: { ticks: { color: 'rgba(255,255,255,0.28)', font: { size: 9 } }, grid: { display: false }, border: { display: false } },
+        y: { ticks: { color: 'rgba(255,255,255,0.28)', font: { size: 9 }, callback: v => v >= 1000 ? (v/1000).toFixed(0) + 'k' : v }, grid: { color: 'rgba(255,255,255,0.04)' }, border: { display: false } }
+      }
+    }
+  });
+
+  // Anomaly badge
+  const maxOutIdx = d.expense_by_day.indexOf(outMax);
+  if (outMax > d.expense_total * 0.2 && d.days[maxOutIdx]) {
+    const ab = document.getElementById('anomalyBadge');
+    ab.style.display = 'flex';
+    document.getElementById('anomalyText').textContent = d.days[maxOutIdx] + ' числа — выброс ' + fmt(outMax) + ' ₽';
+  }
+
+  // Donut chart
+  const cats = d.categories || [];
+  if (donutChartInst) donutChartInst.destroy();
+  donutChartInst = new Chart(document.getElementById('donutChart').getContext('2d'), {
+    type: 'doughnut',
+    data: {
+      labels: cats.map(c => c.name),
+      datasets: [{ data: cats.map(c => c.total), backgroundColor: cats.map((_, i) => PALETTE[i % PALETTE.length]), borderColor: '#08080f', borderWidth: 3, hoverOffset: 6 }]
+    },
+    options: {
+      cutout: '60%',
+      plugins: {
+        legend: { position: 'bottom', labels: { color: 'rgba(255,255,255,0.5)', font: { family: 'Inter', size: 10 }, padding: 10, boxWidth: 8 } },
+        tooltip: { callbacks: { label: ctx => ` ${fmt(ctx.parsed)} ₽ (${(ctx.parsed / d.expense_total * 100).toFixed(1)}%)` } }
+      }
+    }
+  });
+  if (cats[0]) {
+    const pct = (cats[0].total / d.expense_total * 100).toFixed(0);
+    document.getElementById('donutNote').textContent = cats[0].name + ' — ' + pct + '% всех расходов';
+  }
+
+  // Categories list
+  const maxTotal = cats[0] ? cats[0].total : 1;
+  const catList = document.getElementById('catList');
+  catList.innerHTML = '';
+  cats.forEach((cat, i) => {
+    const pct = (cat.total / maxTotal * 100).toFixed(0);
+    const share = (cat.total / d.expense_total * 100).toFixed(1);
+    const color = PALETTE[i % PALETTE.length];
+    catList.innerHTML += `<div class="cat-item"><div class="cat-top"><div class="cat-left"><div class="cat-dot" style="background:${color}"></div><div class="cat-name">${cat.name}</div></div><div class="cat-amount">${fmt(cat.total)} ₽</div></div><div class="cat-bar-track"><div class="cat-bar-fill" style="width:${pct}%;background:${color}"></div></div><div class="cat-meta">${cat.count} операций · ${share}% расходов</div></div>`;
+  });
+
+  // Insights
+  const insights = buildInsights(d);
+  const il = document.getElementById('insightsList');
+  il.innerHTML = '';
+  insights.forEach(ins => {
+    il.innerHTML += `<div class="insight ${ins.cls}"><div class="insight-head"><div class="insight-icon">${renderInsightSVG(ins)}</div><div class="insight-title">${ins.title}</div></div><div class="insight-text">${ins.text}</div>${ins.saving ? `<div class="insight-saving">${ins.saving}</div>` : ''}${ins.action ? `<div class="insight-action">${ins.action}</div>` : ''}</div>`;
+  });
+
+  // Goals
+  const reserveTarget = d.reserve_target || d.expense_total * 6;
+  document.getElementById('lvl1Desc').textContent = `6 мес × ${fmt(d.expense_total)} ₽ (фактических расходов по ЮМани) = ${fmt(reserveTarget)} ₽ на накопительном счёте.`;
+  document.getElementById('lvl1Target').textContent = 'цель: ' + fmt(reserveTarget) + ' ₽';
+
+  const net = d.net || 0;
+  const optSaving = net + Math.round(
+    (cats.find(c=>c.name==='Еда и доставка')?.total || 0) * 0.4 +
+    Math.max(0, (cats.find(c=>c.name==='Игры')?.total || 0) - 1500) +
+    (cats.find(c=>c.name==='Такси')?.total || 0) * 0.3
+  );
+  const months = optSaving > 0 ? Math.ceil(reserveTarget / optSaving) : '∞';
+  document.getElementById('lvl1Hint').textContent = `Сейчас остаток: ${net >= 0 ? '+' : ''}${fmt(net)} ₽/мес. После оптимизации: ~${months} мес до цели`;
+  document.getElementById('tlText2').textContent = `Накопить резерв ${fmt(reserveTarget)} ₽ (~${months} мес). Параллельно: 5–10 тыс./мес в базовый портфель.`;
+
+  // History
+  const opsList = document.getElementById('opsList');
+  opsList.innerHTML = '';
+  (d.recent || []).forEach(op => {
+    const sign = op.dir === 'in' ? '+' : '−';
+    const cls  = op.dir === 'in' ? 'in' : 'out';
+    const amt  = op.amount % 1 ? op.amount.toLocaleString('ru', {minimumFractionDigits: 2}) : fmt(op.amount);
+    opsList.innerHTML += `<div class="op-item"><div class="op-icon">${getOpIcon(op.title, op.dir)}</div><div class="op-info"><div class="op-title">${op.title}</div><div class="op-date">${op.date}</div></div><div class="op-amount ${cls}">${sign}${amt} ₽</div></div>`;
+  });
+}
+
+// ── Load data ──
+async function loadData() {
+  try {
+    const r = await fetch('data.json?t=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const d = await r.json();
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('mainContent').style.display = 'block';
+    document.getElementById('bottomNav').style.display = 'flex';
+    render(d);
+  } catch (e) {
+    document.getElementById('loadingState').innerHTML = '<div style="font-size:13px;color:var(--red);text-align:center;padding:20px">Ошибка загрузки данных.<br><br>' + e.message + '</div>';
+  }
+}
+
+loadData();
 </script>
 </body>
 </html>
