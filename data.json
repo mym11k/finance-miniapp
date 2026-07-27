@@ -1,612 +1,368 @@
 {
-  "total_in": 55748.56,
-  "total_out": 55058.3,
-  "balance": 874.69,
+  "updated": "27.07.2026 21:00",
   "period": "Июль 2026",
-  "categories": {
-    "Еда и доставка": {
-      "total": 30735.93,
-      "count": 28,
-      "ops": [
-        {
-          "amount": 2023.73,
-          "title": "ПЯТЕРОЧКА 9991_P_QR",
-          "date": "2026-07-27"
-        },
-        {
-          "amount": 445.0,
-          "title": "Северок._P_QR",
-          "date": "2026-07-27"
-        },
-        {
-          "amount": 205.0,
-          "title": "Северок._P_QR",
-          "date": "2026-07-24"
-        },
-        {
-          "amount": 190.0,
-          "title": "Северок._P_QR",
-          "date": "2026-07-22"
-        },
-        {
-          "amount": 1160.9,
-          "title": "YANDEX*LAVKARIT",
-          "date": "2026-07-15"
-        },
-        {
-          "amount": 821.0,
-          "title": "ПРОДУКТЫ 2_P_QR",
-          "date": "2026-07-14"
-        },
-        {
-          "amount": 1078.0,
-          "title": "DODO PIZZA CHELYABINSK",
-          "date": "2026-07-14"
-        },
-        {
-          "amount": 2251.0,
-          "title": "ПРОДУКТЫ 2_P_QR",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 342.0,
-          "title": "Северок._P_QR",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 687.6,
-          "title": "YANDEX*EDARIT",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 1422.0,
-          "title": "YANDEX*EDARIT",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 1931.0,
-          "title": "YANDEX*LAVKARIT",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 1422.0,
-          "title": "YANDEX*EDARIT",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 1931.0,
-          "title": "YANDEX*LAVKARIT",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 1422.0,
-          "title": "YANDEX*EDARIT",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 2362.0,
-          "title": "YANDEX*LAVKARIT",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 1489.0,
-          "title": "YANDEX*EDA",
-          "date": "2026-07-11"
-        },
-        {
-          "amount": 1146.0,
-          "title": "DODO PIZZA CHELYABINSK",
-          "date": "2026-07-07"
-        },
-        {
-          "amount": 312.96,
-          "title": "ПЯТЕРОЧКА 9991_P_QR",
-          "date": "2026-07-07"
-        },
-        {
-          "amount": 49.99,
-          "title": "Магазин 1049",
-          "date": "2026-07-07"
-        },
-        {
-          "amount": 334.99,
-          "title": "Магазин 574",
-          "date": "2026-07-06"
-        },
-        {
-          "amount": 316.0,
-          "title": "YANDEX*EDARIT",
-          "date": "2026-07-05"
-        },
-        {
-          "amount": 3854.0,
-          "title": "YANDEX*LAVKARIT",
-          "date": "2026-07-05"
-        },
-        {
-          "amount": 325.0,
-          "title": "ДЛЯ ВАС_P_QR",
-          "date": "2026-07-03"
-        },
-        {
-          "amount": 565.0,
-          "title": "ДЛЯ ВАС_P_QR",
-          "date": "2026-07-03"
-        },
-        {
-          "amount": 829.96,
-          "title": "ПЯТЕРОЧКА_P_QR",
-          "date": "2026-07-03"
-        },
-        {
-          "amount": 672.8,
-          "title": "YANDEX*LAVKARIT",
-          "date": "2026-07-02"
-        },
-        {
-          "amount": 1146.0,
-          "title": "DODO PIZZA CHELYABINSK",
-          "date": "2026-07-02"
-        }
-      ]
-    },
-    "Развлечения": {
-      "total": 6417.96,
-      "count": 6,
-      "ops": [
-        {
-          "amount": 2344.98,
-          "title": "PLAYEROK",
-          "date": "2026-07-27"
-        },
-        {
-          "amount": 340.0,
-          "title": "Бар СКВОТ летник_P_QR",
-          "date": "2026-07-26"
-        },
-        {
-          "amount": 399.0,
-          "title": "IVI.RU",
-          "date": "2026-07-26"
-        },
-        {
-          "amount": 2344.98,
-          "title": "Playerok_",
-          "date": "2026-07-26"
-        },
-        {
-          "amount": 590.0,
-          "title": "United bar_P_QR",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 399.0,
-          "title": "IVI.RU",
-          "date": "2026-07-03"
-        }
-      ]
-    },
-    "Такси": {
-      "total": 4655.0,
-      "count": 17,
-      "ops": [
-        {
-          "amount": 464.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-26"
-        },
-        {
-          "amount": 288.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-26"
-        },
-        {
-          "amount": 239.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-24"
-        },
-        {
-          "amount": 289.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-24"
-        },
-        {
-          "amount": 149.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-23"
-        },
-        {
-          "amount": 203.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-23"
-        },
-        {
-          "amount": 377.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-22"
-        },
-        {
-          "amount": 72.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-21"
-        },
-        {
-          "amount": 324.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 420.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-08"
-        },
-        {
-          "amount": 344.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-08"
-        },
-        {
-          "amount": 410.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-03"
-        },
-        {
-          "amount": 248.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-03"
-        },
-        {
-          "amount": 217.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-03"
-        },
-        {
-          "amount": 181.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-02"
-        },
-        {
-          "amount": 238.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-02"
-        },
-        {
-          "amount": 192.0,
-          "title": "YANDEX*FASTEN",
-          "date": "2026-07-01"
-        }
-      ]
-    },
-    "Аптека": {
-      "total": 285.21,
-      "count": 2,
-      "ops": [
-        {
-          "amount": 146.52,
-          "title": "Аптека 1449_P_QR",
-          "date": "2026-07-25"
-        },
-        {
-          "amount": 138.69,
-          "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
-          "date": "2026-07-24"
-        }
-      ]
-    },
-    "Вейп": {
-      "total": 2937.0,
-      "count": 2,
-      "ops": [
-        {
-          "amount": 549.0,
-          "title": "VAPE MARKET_SBP",
-          "date": "2026-07-23"
-        },
-        {
-          "amount": 2388.0,
-          "title": "VAPE MARKET_P_QR",
-          "date": "2026-07-07"
-        }
-      ]
-    },
-    "Переводы": {
-      "total": 4386.2,
-      "count": 5,
-      "ops": [
-        {
-          "amount": 148.0,
-          "title": "Перевод на карту 220015******9072",
-          "date": "2026-07-22"
-        },
-        {
-          "amount": 251.0,
-          "title": "Перевод на карту 220015******1700",
-          "date": "2026-07-21"
-        },
-        {
-          "amount": 1075.0,
-          "title": "Перевод на карту 220015******1700",
-          "date": "2026-07-21"
-        },
-        {
-          "amount": 292.2,
-          "title": "Перевод на карту 220070******4903",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 2620.0,
-          "title": "Перевод на карту 220423******8791",
-          "date": "2026-07-11"
-        }
-      ]
-    },
-    "Яндекс Дискаунтер": {
-      "total": 2929.0,
-      "count": 1,
-      "ops": [
-        {
-          "amount": 2929.0,
-          "title": "YANDEX*DKRIT",
-          "date": "2026-07-12"
-        }
-      ]
-    },
-    "Связь": {
-      "total": 2393.0,
-      "count": 8,
-      "ops": [
-        {
-          "amount": 660.0,
-          "title": "t2 (Россия): +7 904 9757615",
-          "date": "2026-07-12"
-        },
-        {
-          "amount": 600.0,
-          "title": "Т-Мобайл: +7 995 3801262",
-          "date": "2026-07-11"
-        },
-        {
-          "amount": 99.0,
-          "title": "Т-Мобайл: +7 995 3801262",
-          "date": "2026-07-07"
-        },
-        {
-          "amount": 99.0,
-          "title": "Т-Мобайл: +7 995 3801262",
-          "date": "2026-07-07"
-        },
-        {
-          "amount": 710.0,
-          "title": "INTERSVYAZ",
-          "date": "2026-07-05"
-        },
-        {
-          "amount": 25.0,
-          "title": "t2 (Россия): +7 904 9757615",
-          "date": "2026-07-05"
-        },
-        {
-          "amount": 100.0,
-          "title": "Т-Мобайл: +7 995 3801262",
-          "date": "2026-07-02"
-        },
-        {
-          "amount": 100.0,
-          "title": "Т-Мобайл: +7 995 3801262",
-          "date": "2026-07-02"
-        }
-      ]
-    },
-    "Подписки": {
-      "total": 319.0,
-      "count": 1,
-      "ops": [
-        {
-          "amount": 319.0,
-          "title": "Yandex*360",
-          "date": "2026-07-07"
-        }
-      ]
-    }
-  },
-  "by_day": {
-    "2026-07-01": {
-      "in": 289.56,
-      "out": 192.0
-    },
-    "2026-07-02": {
-      "in": 2200.0,
-      "out": 2437.8
-    },
-    "2026-07-03": {
-      "in": 3000.0,
-      "out": 2993.96
-    },
-    "2026-07-05": {
-      "in": 5000.0,
-      "out": 4905.0
-    },
-    "2026-07-06": {
-      "in": 300.0,
-      "out": 334.99
-    },
-    "2026-07-07": {
-      "in": 5198.0,
-      "out": 4413.95
-    },
-    "2026-07-08": {
-      "in": 0,
-      "out": 764.0
-    },
-    "2026-07-11": {
-      "in": 15600.0,
-      "out": 4709.0
-    },
-    "2026-07-12": {
-      "in": 10490.0,
-      "out": 18565.8
-    },
-    "2026-07-13": {
-      "in": 171.0,
-      "out": 0
-    },
-    "2026-07-14": {
-      "in": 0,
-      "out": 1899.0
-    },
-    "2026-07-15": {
-      "in": 0,
-      "out": 1160.9
-    },
-    "2026-07-21": {
-      "in": 1500.0,
-      "out": 1398.0
-    },
-    "2026-07-22": {
-      "in": 1500.0,
-      "out": 715.0
-    },
-    "2026-07-23": {
-      "in": 0,
-      "out": 901.0
-    },
-    "2026-07-24": {
-      "in": 1000.0,
-      "out": 871.69
-    },
-    "2026-07-25": {
-      "in": 0,
-      "out": 146.52
-    },
-    "2026-07-26": {
-      "in": 4500.0,
-      "out": 3835.98
-    },
-    "2026-07-27": {
-      "in": 5000.0,
-      "out": 4813.71
-    }
-  },
-  "recent_ops": [
+  "balance": 874.69,
+  "income_total": 55749,
+  "income_count": 30,
+  "expense_total": 55058,
+  "expense_count": 70,
+  "net": 691,
+  "reserve_target": 330348,
+  "categories": [
     {
-      "amount": 2023.73,
+      "name": "Еда и доставка",
+      "total": 28560,
+      "count": 24
+    },
+    {
+      "name": "Игры",
+      "total": 4690,
+      "count": 2
+    },
+    {
+      "name": "Такси",
+      "total": 4655,
+      "count": 17
+    },
+    {
+      "name": "Переводы",
+      "total": 4386,
+      "count": 5
+    },
+    {
+      "name": "Кафе",
+      "total": 3710,
+      "count": 4
+    },
+    {
+      "name": "Вейп / табак",
+      "total": 2937,
+      "count": 2
+    },
+    {
+      "name": "Прочее",
+      "total": 2464,
+      "count": 4
+    },
+    {
+      "name": "Связь",
+      "total": 2393,
+      "count": 8
+    },
+    {
+      "name": "Подписки",
+      "total": 1117,
+      "count": 3
+    },
+    {
+      "name": "Здоровье",
+      "total": 147,
+      "count": 1
+    }
+  ],
+  "days": [
+    "01",
+    "02",
+    "03",
+    "05",
+    "06",
+    "07",
+    "08",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27"
+  ],
+  "income_by_day": [
+    290,
+    2200,
+    3000,
+    5000,
+    300,
+    5198,
+    0,
+    15600,
+    10490,
+    171,
+    0,
+    0,
+    1500,
+    1500,
+    0,
+    1000,
+    0,
+    4500,
+    5000
+  ],
+  "expense_by_day": [
+    192,
+    2438,
+    2994,
+    4905,
+    335,
+    4414,
+    764,
+    4709,
+    18566,
+    0,
+    1899,
+    1161,
+    1398,
+    715,
+    901,
+    872,
+    147,
+    3836,
+    4814
+  ],
+  "recent": [
+    {
       "title": "ПЯТЕРОЧКА 9991_P_QR",
-      "date": "2026-07-27",
-      "direction": "out"
+      "amount": 2023.73,
+      "date": "27 июл",
+      "dir": "out"
     },
     {
-      "amount": 1000.0,
       "title": "Перевод: SBOL",
-      "date": "2026-07-27",
-      "direction": "in"
+      "amount": 1000.0,
+      "date": "27 июл",
+      "dir": "in"
     },
     {
-      "amount": 2344.98,
       "title": "PLAYEROK",
-      "date": "2026-07-27",
-      "direction": "out"
-    },
-    {
-      "amount": 2500.0,
-      "title": "Перевод: SBOL",
-      "date": "2026-07-27",
-      "direction": "in"
-    },
-    {
-      "amount": 1500.0,
-      "title": "Перевод: OMP",
-      "date": "2026-07-27",
-      "direction": "in"
-    },
-    {
-      "amount": 445.0,
-      "title": "Северок._P_QR",
-      "date": "2026-07-27",
-      "direction": "out"
-    },
-    {
-      "amount": 464.0,
-      "title": "YANDEX*FASTEN",
-      "date": "2026-07-26",
-      "direction": "out"
-    },
-    {
-      "amount": 340.0,
-      "title": "Бар СКВОТ летник_P_QR",
-      "date": "2026-07-26",
-      "direction": "out"
-    },
-    {
-      "amount": 399.0,
-      "title": "IVI.RU",
-      "date": "2026-07-26",
-      "direction": "out"
-    },
-    {
-      "amount": 288.0,
-      "title": "YANDEX*FASTEN",
-      "date": "2026-07-26",
-      "direction": "out"
-    },
-    {
       "amount": 2344.98,
-      "title": "Playerok_",
-      "date": "2026-07-26",
-      "direction": "out"
+      "date": "27 июл",
+      "dir": "out"
     },
     {
-      "amount": 2000.0,
       "title": "Перевод: SBOL",
-      "date": "2026-07-26",
-      "direction": "in"
+      "amount": 2500.0,
+      "date": "27 июл",
+      "dir": "in"
     },
     {
-      "amount": 1000.0,
-      "title": "Перевод: SBOL",
-      "date": "2026-07-26",
-      "direction": "in"
-    },
-    {
+      "title": "Перевод: OMP",
       "amount": 1500.0,
-      "title": "Перевод: SBOL",
-      "date": "2026-07-26",
-      "direction": "in"
+      "date": "27 июл",
+      "dir": "in"
     },
     {
-      "amount": 146.52,
-      "title": "Аптека 1449_P_QR",
-      "date": "2026-07-25",
-      "direction": "out"
-    },
-    {
-      "amount": 205.0,
       "title": "Северок._P_QR",
-      "date": "2026-07-24",
-      "direction": "out"
+      "amount": 445.0,
+      "date": "27 июл",
+      "dir": "out"
     },
     {
-      "amount": 239.0,
       "title": "YANDEX*FASTEN",
-      "date": "2026-07-24",
-      "direction": "out"
+      "amount": 464.0,
+      "date": "26 июл",
+      "dir": "out"
     },
     {
-      "amount": 138.69,
-      "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
-      "date": "2026-07-24",
-      "direction": "out"
+      "title": "Бар СКВОТ летник_P_QR",
+      "amount": 340.0,
+      "date": "26 июл",
+      "dir": "out"
     },
     {
-      "amount": 289.0,
+      "title": "IVI.RU",
+      "amount": 399.0,
+      "date": "26 июл",
+      "dir": "out"
+    },
+    {
       "title": "YANDEX*FASTEN",
-      "date": "2026-07-24",
-      "direction": "out"
+      "amount": 288.0,
+      "date": "26 июл",
+      "dir": "out"
     },
     {
-      "amount": 1000.0,
+      "title": "Playerok_",
+      "amount": 2344.98,
+      "date": "26 июл",
+      "dir": "out"
+    },
+    {
       "title": "Перевод: SBOL",
-      "date": "2026-07-24",
-      "direction": "in"
+      "amount": 2000.0,
+      "date": "26 июл",
+      "dir": "in"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 1000.0,
+      "date": "26 июл",
+      "dir": "in"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 1500.0,
+      "date": "26 июл",
+      "dir": "in"
+    },
+    {
+      "title": "Аптека 1449_P_QR",
+      "amount": 146.52,
+      "date": "25 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Северок._P_QR",
+      "amount": 205.0,
+      "date": "24 июл",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 239.0,
+      "date": "24 июл",
+      "dir": "out"
+    },
+    {
+      "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
+      "amount": 138.69,
+      "date": "24 июл",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 289.0,
+      "date": "24 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 1000.0,
+      "date": "24 июл",
+      "dir": "in"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 149.0,
+      "date": "23 июл",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 203.0,
+      "date": "23 июл",
+      "dir": "out"
+    },
+    {
+      "title": "VAPE MARKET_SBP",
+      "amount": 549.0,
+      "date": "23 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Северок._P_QR",
+      "amount": 190.0,
+      "date": "22 июл",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 377.0,
+      "date": "22 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 1500.0,
+      "date": "22 июл",
+      "dir": "in"
+    },
+    {
+      "title": "Перевод на карту 220015******9072",
+      "amount": 148.0,
+      "date": "22 июл",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 72.0,
+      "date": "21 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод на карту 220015******1700",
+      "amount": 251.0,
+      "date": "21 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод на карту 220015******1700",
+      "amount": 1075.0,
+      "date": "21 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 1500.0,
+      "date": "21 июл",
+      "dir": "in"
+    },
+    {
+      "title": "YANDEX*LAVKARIT",
+      "amount": 1160.9,
+      "date": "15 июл",
+      "dir": "out"
+    },
+    {
+      "title": "ПРОДУКТЫ 2_P_QR",
+      "amount": 821.0,
+      "date": "14 июл",
+      "dir": "out"
+    },
+    {
+      "title": "DODO PIZZA CHELYABINSK",
+      "amount": 1078.0,
+      "date": "14 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Возврат: YANDEX*DKRIT",
+      "amount": 171.0,
+      "date": "13 июл",
+      "dir": "in"
+    },
+    {
+      "title": "United bar_P_QR",
+      "amount": 590.0,
+      "date": "12 июл",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 324.0,
+      "date": "12 июл",
+      "dir": "out"
+    },
+    {
+      "title": "ПРОДУКТЫ 2_P_QR",
+      "amount": 2251.0,
+      "date": "12 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Северок._P_QR",
+      "amount": 342.0,
+      "date": "12 июл",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*EDARIT",
+      "amount": 687.6,
+      "date": "12 июл",
+      "dir": "out"
     }
   ]
 }
