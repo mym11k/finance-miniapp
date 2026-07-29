@@ -1,12 +1,12 @@
 {
-  "updated": "29.07.2026 08:00",
+  "updated": "29.07.2026 09:00",
   "period": "Июль 2026",
-  "balance": 874.69,
-  "income_total": 55749,
-  "income_count": 30,
+  "balance": 1273.69,
+  "income_total": 56148,
+  "income_count": 31,
   "expense_total": 55058,
   "expense_count": 70,
-  "net": 691,
+  "net": 1090,
   "reserve_target": 330348,
   "categories": [
     {
@@ -79,7 +79,8 @@
     "24",
     "25",
     "26",
-    "27"
+    "27",
+    "29"
   ],
   "income_by_day": [
     290,
@@ -100,7 +101,8 @@
     1000,
     0,
     4500,
-    5000
+    5000,
+    399
   ],
   "expense_by_day": [
     192,
@@ -121,9 +123,16 @@
     872,
     147,
     3836,
-    4814
+    4814,
+    0
   ],
   "recent": [
+    {
+      "title": "Возврат: IVI.RU",
+      "amount": 399.0,
+      "date": "29 июл",
+      "dir": "in"
+    },
     {
       "title": "ПЯТЕРОЧКА 9991_P_QR",
       "amount": 2023.73,
@@ -355,12 +364,6 @@
     {
       "title": "Северок._P_QR",
       "amount": 342.0,
-      "date": "12 июл",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*EDARIT",
-      "amount": 687.6,
       "date": "12 июл",
       "dir": "out"
     }
