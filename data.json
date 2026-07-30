@@ -1,23 +1,23 @@
 {
-  "updated": "30.07.2026 08:00",
+  "updated": "30.07.2026 09:00",
   "period": "Июль 2026",
-  "balance": 567.79,
-  "income_total": 56148,
-  "income_count": 31,
-  "expense_total": 55764,
-  "expense_count": 73,
-  "net": 384,
-  "reserve_target": 334584,
+  "balance": 559.8,
+  "income_total": 56448,
+  "income_count": 32,
+  "expense_total": 56072,
+  "expense_count": 75,
+  "net": 376,
+  "reserve_target": 336432,
   "categories": [
     {
       "name": "Еда и доставка",
-      "total": 28560,
-      "count": 24
+      "total": 28650,
+      "count": 25
     },
     {
       "name": "Такси",
-      "total": 4875,
-      "count": 18
+      "total": 5093,
+      "count": 19
     },
     {
       "name": "Игры",
@@ -80,7 +80,8 @@
     "25",
     "26",
     "27",
-    "29"
+    "29",
+    "30"
   ],
   "income_by_day": [
     290,
@@ -102,7 +103,8 @@
     0,
     4500,
     5000,
-    399
+    399,
+    300
   ],
   "expense_by_day": [
     192,
@@ -124,9 +126,28 @@
     147,
     3836,
     4814,
-    706
+    706,
+    308
   ],
   "recent": [
+    {
+      "title": "Перевод: VTB",
+      "amount": 300.0,
+      "date": "30 июл",
+      "dir": "in"
+    },
+    {
+      "title": "ПЯТЕРОЧКА 13434_P_QR",
+      "amount": 89.99,
+      "date": "30 июл",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 218.0,
+      "date": "30 июл",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 220.0,
@@ -347,24 +368,6 @@
       "title": "ПРОДУКТЫ 2_P_QR",
       "amount": 821.0,
       "date": "14 июл",
-      "dir": "out"
-    },
-    {
-      "title": "DODO PIZZA CHELYABINSK",
-      "amount": 1078.0,
-      "date": "14 июл",
-      "dir": "out"
-    },
-    {
-      "title": "Возврат: YANDEX*DKRIT",
-      "amount": 171.0,
-      "date": "13 июл",
-      "dir": "in"
-    },
-    {
-      "title": "United bar_P_QR",
-      "amount": 590.0,
-      "date": "12 июл",
       "dir": "out"
     }
   ]
