@@ -1,18 +1,18 @@
 {
-  "updated": "31.07.2026 19:00",
+  "updated": "31.07.2026 20:00",
   "period": "Июль 2026",
-  "balance": 302.35,
-  "income_total": 57248,
-  "income_count": 35,
-  "expense_total": 57130,
-  "expense_count": 79,
-  "net": 118,
-  "reserve_target": 342780,
+  "balance": 1698.35,
+  "income_total": 58748,
+  "income_count": 36,
+  "expense_total": 57234,
+  "expense_count": 80,
+  "net": 1514,
+  "reserve_target": 343404,
   "categories": [
     {
       "name": "Еда и доставка",
-      "total": 28935,
-      "count": 26
+      "total": 29039,
+      "count": 27
     },
     {
       "name": "Такси",
@@ -106,7 +106,7 @@
     5000,
     399,
     300,
-    800
+    2300
   ],
   "expense_by_day": [
     192,
@@ -130,9 +130,21 @@
     4814,
     706,
     714,
-    651
+    755
   ],
   "recent": [
+    {
+      "title": "Северок._P_QR",
+      "amount": 104.0,
+      "date": "31 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 1500.0,
+      "date": "31 июл",
+      "dir": "in"
+    },
     {
       "title": "Северок._P_QR",
       "amount": 285.0,
@@ -360,18 +372,6 @@
       "amount": 190.0,
       "date": "22 июл",
       "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 377.0,
-      "date": "22 июл",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод: SBOL",
-      "amount": 1500.0,
-      "date": "22 июл",
-      "dir": "in"
     }
   ]
 }
