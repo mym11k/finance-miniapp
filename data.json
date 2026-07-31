@@ -1,13 +1,13 @@
 {
-  "updated": "31.07.2026 06:00",
+  "updated": "31.07.2026 07:00",
   "period": "Июль 2026",
-  "balance": 153.35,
-  "income_total": 56448,
-  "income_count": 32,
-  "expense_total": 56479,
-  "expense_count": 77,
-  "net": -31,
-  "reserve_target": 338874,
+  "balance": 87.35,
+  "income_total": 56748,
+  "income_count": 34,
+  "expense_total": 56845,
+  "expense_count": 78,
+  "net": -97,
+  "reserve_target": 341070,
   "categories": [
     {
       "name": "Еда и доставка",
@@ -16,8 +16,8 @@
     },
     {
       "name": "Такси",
-      "total": 5281,
-      "count": 20
+      "total": 5647,
+      "count": 21
     },
     {
       "name": "Игры",
@@ -81,7 +81,8 @@
     "26",
     "27",
     "29",
-    "30"
+    "30",
+    "31"
   ],
   "income_by_day": [
     290,
@@ -104,6 +105,7 @@
     4500,
     5000,
     399,
+    300,
     300
   ],
   "expense_by_day": [
@@ -127,9 +129,28 @@
     3836,
     4814,
     706,
-    714
+    714,
+    366
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 366.0,
+      "date": "31 июл",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 100.0,
+      "date": "31 июл",
+      "dir": "in"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 200.0,
+      "date": "31 июл",
+      "dir": "in"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 188.0,
@@ -351,24 +372,6 @@
       "amount": 72.0,
       "date": "21 июл",
       "dir": "out"
-    },
-    {
-      "title": "Перевод на карту 220015******1700",
-      "amount": 251.0,
-      "date": "21 июл",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод на карту 220015******1700",
-      "amount": 1075.0,
-      "date": "21 июл",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод: SBOL",
-      "amount": 1500.0,
-      "date": "21 июл",
-      "dir": "in"
     }
   ]
 }
