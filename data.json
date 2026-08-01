@@ -1,13 +1,13 @@
 {
-  "updated": "01.08.2026 12:00",
+  "updated": "01.08.2026 13:00",
   "period": "Август 2026",
-  "balance": 460.91,
+  "balance": 235.91,
   "income_total": 1000,
   "income_count": 1,
-  "expense_total": 2237,
-  "expense_count": 5,
-  "net": -1237,
-  "reserve_target": 13422,
+  "expense_total": 2462,
+  "expense_count": 6,
+  "net": -1462,
+  "reserve_target": 14772,
   "categories": [
     {
       "name": "Переводы",
@@ -15,13 +15,13 @@
       "count": 1
     },
     {
-      "name": "Прочее",
-      "total": 325,
-      "count": 1
+      "name": "Такси",
+      "total": 417,
+      "count": 2
     },
     {
-      "name": "Такси",
-      "total": 192,
+      "name": "Прочее",
+      "total": 325,
       "count": 1
     },
     {
@@ -37,9 +37,15 @@
     1000
   ],
   "expense_by_day": [
-    2237
+    2462
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 225.0,
+      "date": "01 авг",
+      "dir": "out"
+    },
     {
       "title": "Магазин 15166",
       "amount": 325.46,
