@@ -1,16 +1,41 @@
 {
-  "updated": "01.08.2026 08:00",
+  "updated": "01.08.2026 09:00",
   "period": "Август 2026",
-  "balance": 1698.35,
-  "income_total": 0,
-  "income_count": 0,
-  "expense_total": 0,
-  "expense_count": 0,
-  "net": 0,
-  "reserve_target": 0,
-  "categories": [],
-  "days": [],
-  "income_by_day": [],
-  "expense_by_day": [],
-  "recent": []
+  "balance": 1108.35,
+  "income_total": 1000,
+  "income_count": 1,
+  "expense_total": 1590,
+  "expense_count": 1,
+  "net": -590,
+  "reserve_target": 9540,
+  "categories": [
+    {
+      "name": "Переводы",
+      "total": 1590,
+      "count": 1
+    }
+  ],
+  "days": [
+    "01"
+  ],
+  "income_by_day": [
+    1000
+  ],
+  "expense_by_day": [
+    1590
+  ],
+  "recent": [
+    {
+      "title": "Перевод: T-Bank Card2Card",
+      "amount": 1000.0,
+      "date": "01 авг",
+      "dir": "in"
+    },
+    {
+      "title": "Перевод на карту 220027******4399",
+      "amount": 1590.0,
+      "date": "01 авг",
+      "dir": "out"
+    }
+  ]
 }
