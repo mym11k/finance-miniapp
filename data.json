@@ -1,13 +1,13 @@
 {
-  "updated": "02.08.2026 11:00",
+  "updated": "02.08.2026 12:00",
   "period": "Август 2026",
-  "balance": 14.91,
-  "income_total": 1518,
-  "income_count": 3,
-  "expense_total": 3201,
-  "expense_count": 9,
-  "net": -1683,
-  "reserve_target": 19206,
+  "balance": 64.92,
+  "income_total": 1618,
+  "income_count": 4,
+  "expense_total": 3251,
+  "expense_count": 10,
+  "net": -1633,
+  "reserve_target": 19506,
   "categories": [
     {
       "name": "Переводы",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 130,
-      "count": 2
+      "total": 180,
+      "count": 3
     }
   ],
   "days": [
@@ -36,13 +36,25 @@
   ],
   "income_by_day": [
     1518,
-    0
+    100
   ],
   "expense_by_day": [
     2930,
-    271
+    321
   ],
   "recent": [
+    {
+      "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
+      "amount": 49.99,
+      "date": "02 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 100.0,
+      "date": "02 авг",
+      "dir": "in"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 271.0,
