@@ -1,23 +1,23 @@
 {
-  "updated": "02.08.2026 16:00",
+  "updated": "02.08.2026 17:00",
   "period": "Август 2026",
-  "balance": 4468.93,
+  "balance": 3393.93,
   "income_total": 6618,
   "income_count": 5,
-  "expense_total": 3847,
-  "expense_count": 12,
-  "net": 2771,
-  "reserve_target": 23082,
+  "expense_total": 4922,
+  "expense_count": 13,
+  "net": 1696,
+  "reserve_target": 29532,
   "categories": [
+    {
+      "name": "Переводы",
+      "total": 2665,
+      "count": 2
+    },
     {
       "name": "Такси",
       "total": 1702,
       "count": 6
-    },
-    {
-      "name": "Переводы",
-      "total": 1590,
-      "count": 1
     },
     {
       "name": "Прочее",
@@ -40,9 +40,15 @@
   ],
   "expense_by_day": [
     2930,
-    917
+    1992
   ],
   "recent": [
+    {
+      "title": "Перевод на карту 220220******6766",
+      "amount": 1075.0,
+      "date": "02 авг",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 546.0,
