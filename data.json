@@ -1,13 +1,13 @@
 {
-  "updated": "02.08.2026 01:00",
+  "updated": "02.08.2026 02:00",
   "period": "Август 2026",
-  "balance": 285.91,
+  "balance": 14.91,
   "income_total": 1518,
   "income_count": 3,
-  "expense_total": 2930,
-  "expense_count": 8,
-  "net": -1412,
-  "reserve_target": 17580,
+  "expense_total": 3201,
+  "expense_count": 9,
+  "net": -1683,
+  "reserve_target": 19206,
   "categories": [
     {
       "name": "Переводы",
@@ -16,8 +16,8 @@
     },
     {
       "name": "Такси",
-      "total": 885,
-      "count": 4
+      "total": 1156,
+      "count": 5
     },
     {
       "name": "Прочее",
@@ -31,15 +31,24 @@
     }
   ],
   "days": [
-    "01"
+    "01",
+    "02"
   ],
   "income_by_day": [
-    1518
+    1518,
+    0
   ],
   "expense_by_day": [
-    2930
+    2930,
+    271
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 271.0,
+      "date": "02 авг",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 400.0,
