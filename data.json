@@ -1,13 +1,13 @@
 {
-  "updated": "03.08.2026 14:00",
+  "updated": "03.08.2026 15:00",
   "period": "Август 2026",
-  "balance": 1799.93,
+  "balance": 81.04,
   "income_total": 6618,
   "income_count": 5,
-  "expense_total": 6516,
-  "expense_count": 15,
-  "net": 102,
-  "reserve_target": 39096,
+  "expense_total": 8235,
+  "expense_count": 18,
+  "net": -1617,
+  "reserve_target": 49410,
   "categories": [
     {
       "name": "Переводы",
@@ -21,28 +21,49 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 911,
-      "count": 4
+      "total": 2344,
+      "count": 6
     },
     {
       "name": "Прочее",
-      "total": 375,
-      "count": 2
+      "total": 661,
+      "count": 3
     }
   ],
   "days": [
     "01",
-    "02"
+    "02",
+    "03"
   ],
   "income_by_day": [
     1518,
-    5100
+    5100,
+    0
   ],
   "expense_by_day": [
     2930,
-    3586
+    3586,
+    1719
   ],
   "recent": [
+    {
+      "title": "Северок._P_QR",
+      "amount": 234.0,
+      "date": "03 авг",
+      "dir": "out"
+    },
+    {
+      "title": "BEST PRICE Ltd",
+      "amount": 286.0,
+      "date": "03 авг",
+      "dir": "out"
+    },
+    {
+      "title": "ПЯТЕРОЧКА 9991_P_QR",
+      "amount": 1198.89,
+      "date": "03 авг",
+      "dir": "out"
+    },
     {
       "title": "Северок._P_QR",
       "amount": 731.0,
