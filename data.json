@@ -1,13 +1,13 @@
 {
-  "updated": "04.08.2026 06:00",
+  "updated": "04.08.2026 07:00",
   "period": "Август 2026",
-  "balance": 81.04,
+  "balance": 31.05,
   "income_total": 6618,
   "income_count": 5,
-  "expense_total": 8235,
-  "expense_count": 18,
-  "net": -1617,
-  "reserve_target": 49410,
+  "expense_total": 8285,
+  "expense_count": 19,
+  "net": -1667,
+  "reserve_target": 49710,
   "categories": [
     {
       "name": "Переводы",
@@ -21,8 +21,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 2344,
-      "count": 6
+      "total": 2394,
+      "count": 7
     },
     {
       "name": "Прочее",
@@ -33,19 +33,28 @@
   "days": [
     "01",
     "02",
-    "03"
+    "03",
+    "04"
   ],
   "income_by_day": [
     1518,
     5100,
+    0,
     0
   ],
   "expense_by_day": [
     2930,
     3586,
-    1719
+    1719,
+    50
   ],
   "recent": [
+    {
+      "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
+      "amount": 49.99,
+      "date": "04 авг",
+      "dir": "out"
+    },
     {
       "title": "Северок._P_QR",
       "amount": 234.0,
