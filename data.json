@@ -1,13 +1,13 @@
 {
-  "updated": "04.08.2026 14:00",
+  "updated": "04.08.2026 15:00",
   "period": "Август 2026",
-  "balance": 231.05,
+  "balance": 56.08,
   "income_total": 6818,
   "income_count": 6,
-  "expense_total": 8285,
-  "expense_count": 19,
-  "net": -1467,
-  "reserve_target": 49710,
+  "expense_total": 8460,
+  "expense_count": 20,
+  "net": -1642,
+  "reserve_target": 50760,
   "categories": [
     {
       "name": "Переводы",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Прочее",
-      "total": 661,
-      "count": 3
+      "total": 836,
+      "count": 4
     }
   ],
   "days": [
@@ -46,9 +46,15 @@
     2930,
     3586,
     1719,
-    50
+    225
   ],
   "recent": [
+    {
+      "title": "Магазин 26647",
+      "amount": 174.97,
+      "date": "04 авг",
+      "dir": "out"
+    },
     {
       "title": "Перевод: SBOL",
       "amount": 200.0,
