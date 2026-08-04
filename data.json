@@ -1,12 +1,12 @@
 {
-  "updated": "04.08.2026 13:00",
+  "updated": "04.08.2026 14:00",
   "period": "Август 2026",
-  "balance": 31.05,
-  "income_total": 6618,
-  "income_count": 5,
+  "balance": 231.05,
+  "income_total": 6818,
+  "income_count": 6,
   "expense_total": 8285,
   "expense_count": 19,
-  "net": -1667,
+  "net": -1467,
   "reserve_target": 49710,
   "categories": [
     {
@@ -40,7 +40,7 @@
     1518,
     5100,
     0,
-    0
+    200
   ],
   "expense_by_day": [
     2930,
@@ -49,6 +49,12 @@
     50
   ],
   "recent": [
+    {
+      "title": "Перевод: SBOL",
+      "amount": 200.0,
+      "date": "04 авг",
+      "dir": "in"
+    },
     {
       "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
       "amount": 49.99,
