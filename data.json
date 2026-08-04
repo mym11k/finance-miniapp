@@ -1,18 +1,18 @@
 {
-  "updated": "04.08.2026 19:00",
+  "updated": "04.08.2026 20:00",
   "period": "Август 2026",
-  "balance": 119.08,
-  "income_total": 7118,
-  "income_count": 7,
-  "expense_total": 8697,
-  "expense_count": 21,
-  "net": -1579,
-  "reserve_target": 52182,
+  "balance": 2059.08,
+  "income_total": 9618,
+  "income_count": 8,
+  "expense_total": 9257,
+  "expense_count": 22,
+  "net": 361,
+  "reserve_target": 55542,
   "categories": [
     {
       "name": "Переводы",
-      "total": 2665,
-      "count": 2
+      "total": 3225,
+      "count": 3
     },
     {
       "name": "Такси",
@@ -40,15 +40,27 @@
     1518,
     5100,
     0,
-    500
+    3000
   ],
   "expense_by_day": [
     2930,
     3586,
     1719,
-    462
+    1022
   ],
   "recent": [
+    {
+      "title": "Перевод на карту 220070******5454",
+      "amount": 560.0,
+      "date": "04 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: C2C PSB M F",
+      "amount": 2500.0,
+      "date": "04 авг",
+      "dir": "in"
+    },
     {
       "title": "Магазин 31687",
       "amount": 237.0,
