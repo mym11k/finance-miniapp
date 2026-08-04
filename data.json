@@ -1,13 +1,13 @@
 {
-  "updated": "04.08.2026 16:00",
+  "updated": "04.08.2026 17:00",
   "period": "Август 2026",
-  "balance": 356.08,
+  "balance": 119.08,
   "income_total": 7118,
   "income_count": 7,
-  "expense_total": 8460,
-  "expense_count": 20,
-  "net": -1342,
-  "reserve_target": 50760,
+  "expense_total": 8697,
+  "expense_count": 21,
+  "net": -1579,
+  "reserve_target": 52182,
   "categories": [
     {
       "name": "Переводы",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Прочее",
-      "total": 836,
-      "count": 4
+      "total": 1073,
+      "count": 5
     }
   ],
   "days": [
@@ -46,9 +46,15 @@
     2930,
     3586,
     1719,
-    225
+    462
   ],
   "recent": [
+    {
+      "title": "Магазин 31687",
+      "amount": 237.0,
+      "date": "04 авг",
+      "dir": "out"
+    },
     {
       "title": "Перевод: T-Bank Card2Card",
       "amount": 300.0,
