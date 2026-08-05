@@ -1,13 +1,13 @@
 {
-  "updated": "05.08.2026 17:00",
+  "updated": "05.08.2026 18:00",
   "period": "Август 2026",
-  "balance": 6649.08,
+  "balance": 5170.08,
   "income_total": 19618,
   "income_count": 9,
-  "expense_total": 14667,
-  "expense_count": 25,
-  "net": 4951,
-  "reserve_target": 88002,
+  "expense_total": 16146,
+  "expense_count": 26,
+  "net": 3472,
+  "reserve_target": 96876,
   "categories": [
     {
       "name": "Переводы",
@@ -16,8 +16,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 3146,
-      "count": 8
+      "total": 4625,
+      "count": 9
     },
     {
       "name": "Такси",
@@ -49,9 +49,15 @@
     3586,
     1719,
     1022,
-    5410
+    6889
   ],
   "recent": [
+    {
+      "title": "YANDEX*LAVKARIT",
+      "amount": 1479.0,
+      "date": "05 авг",
+      "dir": "out"
+    },
     {
       "title": "Северок._P_QR",
       "amount": 752.0,
