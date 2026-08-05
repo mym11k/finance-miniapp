@@ -1,23 +1,23 @@
 {
-  "updated": "05.08.2026 00:00",
+  "updated": "05.08.2026 01:00",
   "period": "Август 2026",
-  "balance": 12059.08,
+  "balance": 7401.08,
   "income_total": 19618,
   "income_count": 9,
-  "expense_total": 9257,
-  "expense_count": 22,
-  "net": 10361,
-  "reserve_target": 55542,
+  "expense_total": 13915,
+  "expense_count": 24,
+  "net": 5703,
+  "reserve_target": 83490,
   "categories": [
     {
       "name": "Переводы",
-      "total": 3225,
-      "count": 3
+      "total": 7390,
+      "count": 4
     },
     {
       "name": "Такси",
-      "total": 2565,
-      "count": 7
+      "total": 3058,
+      "count": 8
     },
     {
       "name": "Еда и доставка",
@@ -34,21 +34,36 @@
     "01",
     "02",
     "03",
-    "04"
+    "04",
+    "05"
   ],
   "income_by_day": [
     1518,
     5100,
     0,
-    13000
+    13000,
+    0
   ],
   "expense_by_day": [
     2930,
     3586,
     1719,
-    1022
+    1022,
+    4658
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 493.0,
+      "date": "05 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод на карту 220015******1796",
+      "amount": 4165.0,
+      "date": "05 авг",
+      "dir": "out"
+    },
     {
       "title": "Перевод: C2C PSB M F",
       "amount": 10000.0,
