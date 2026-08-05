@@ -1,13 +1,13 @@
 {
-  "updated": "05.08.2026 02:00",
+  "updated": "05.08.2026 03:00",
   "period": "Август 2026",
-  "balance": 7401.08,
+  "balance": 6649.08,
   "income_total": 19618,
   "income_count": 9,
-  "expense_total": 13915,
-  "expense_count": 24,
-  "net": 5703,
-  "reserve_target": 83490,
+  "expense_total": 14667,
+  "expense_count": 25,
+  "net": 4951,
+  "reserve_target": 88002,
   "categories": [
     {
       "name": "Переводы",
@@ -15,14 +15,14 @@
       "count": 4
     },
     {
-      "name": "Такси",
-      "total": 3058,
+      "name": "Еда и доставка",
+      "total": 3146,
       "count": 8
     },
     {
-      "name": "Еда и доставка",
-      "total": 2394,
-      "count": 7
+      "name": "Такси",
+      "total": 3058,
+      "count": 8
     },
     {
       "name": "Прочее",
@@ -49,9 +49,15 @@
     3586,
     1719,
     1022,
-    4658
+    5410
   ],
   "recent": [
+    {
+      "title": "Северок._P_QR",
+      "amount": 752.0,
+      "date": "05 авг",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 493.0,
