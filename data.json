@@ -1,12 +1,12 @@
 {
-  "updated": "04.08.2026 23:00",
+  "updated": "05.08.2026 00:00",
   "period": "Август 2026",
-  "balance": 2059.08,
-  "income_total": 9618,
-  "income_count": 8,
+  "balance": 12059.08,
+  "income_total": 19618,
+  "income_count": 9,
   "expense_total": 9257,
   "expense_count": 22,
-  "net": 361,
+  "net": 10361,
   "reserve_target": 55542,
   "categories": [
     {
@@ -40,7 +40,7 @@
     1518,
     5100,
     0,
-    3000
+    13000
   ],
   "expense_by_day": [
     2930,
@@ -49,6 +49,12 @@
     1022
   ],
   "recent": [
+    {
+      "title": "Перевод: C2C PSB M F",
+      "amount": 10000.0,
+      "date": "04 авг",
+      "dir": "in"
+    },
     {
       "title": "Перевод на карту 220070******5454",
       "amount": 560.0,
