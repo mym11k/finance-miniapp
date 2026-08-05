@@ -1,13 +1,13 @@
 {
-  "updated": "05.08.2026 18:00",
+  "updated": "05.08.2026 19:00",
   "period": "Август 2026",
-  "balance": 5170.08,
+  "balance": 4967.1,
   "income_total": 19618,
   "income_count": 9,
-  "expense_total": 16146,
-  "expense_count": 26,
-  "net": 3472,
-  "reserve_target": 96876,
+  "expense_total": 16349,
+  "expense_count": 27,
+  "net": 3269,
+  "reserve_target": 98094,
   "categories": [
     {
       "name": "Переводы",
@@ -28,6 +28,11 @@
       "name": "Прочее",
       "total": 1073,
       "count": 5
+    },
+    {
+      "name": "Игры",
+      "total": 203,
+      "count": 1
     }
   ],
   "days": [
@@ -49,9 +54,15 @@
     3586,
     1719,
     1022,
-    6889
+    7092
   ],
   "recent": [
+    {
+      "title": "Playerok",
+      "amount": 202.98,
+      "date": "05 авг",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*LAVKARIT",
       "amount": 1479.0,
