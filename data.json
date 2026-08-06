@@ -1,13 +1,13 @@
 {
-  "updated": "06.08.2026 19:00",
+  "updated": "06.08.2026 20:00",
   "period": "Август 2026",
-  "balance": 2005.11,
+  "balance": 1915.11,
   "income_total": 21097,
   "income_count": 10,
-  "expense_total": 20790,
-  "expense_count": 31,
-  "net": 307,
-  "reserve_target": 124740,
+  "expense_total": 20880,
+  "expense_count": 32,
+  "net": 217,
+  "reserve_target": 125280,
   "categories": [
     {
       "name": "Переводы",
@@ -33,6 +33,11 @@
       "name": "Игры",
       "total": 203,
       "count": 1
+    },
+    {
+      "name": "Связь",
+      "total": 90,
+      "count": 1
     }
   ],
   "days": [
@@ -57,9 +62,15 @@
     1719,
     1022,
     7092,
-    4441
+    4531
   ],
   "recent": [
+    {
+      "title": "t2 (Россия): +7 904 9757615",
+      "amount": 90.0,
+      "date": "06 авг",
+      "dir": "out"
+    },
     {
       "title": "Yablonya_QR",
       "amount": 2499.0,
@@ -293,12 +304,6 @@
       "amount": 49.99,
       "date": "01 авг",
       "dir": "out"
-    },
-    {
-      "title": "Перевод: T-Bank Card2Card",
-      "amount": 1000.0,
-      "date": "01 авг",
-      "dir": "in"
     }
   ]
 }
