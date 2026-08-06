@@ -1,13 +1,13 @@
 {
-  "updated": "06.08.2026 15:00",
+  "updated": "06.08.2026 16:00",
   "period": "Август 2026",
-  "balance": 4504.11,
+  "balance": 2005.11,
   "income_total": 21097,
   "income_count": 10,
-  "expense_total": 18291,
-  "expense_count": 30,
-  "net": 2806,
-  "reserve_target": 109746,
+  "expense_total": 20790,
+  "expense_count": 31,
+  "net": 307,
+  "reserve_target": 124740,
   "categories": [
     {
       "name": "Переводы",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Прочее",
-      "total": 1073,
-      "count": 5
+      "total": 3572,
+      "count": 6
     },
     {
       "name": "Игры",
@@ -57,9 +57,15 @@
     1719,
     1022,
     7092,
-    1942
+    4441
   ],
   "recent": [
+    {
+      "title": "Yablonya_QR",
+      "amount": 2499.0,
+      "date": "06 авг",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*LAVKARIT",
       "amount": 1320.0,
@@ -293,12 +299,6 @@
       "amount": 1000.0,
       "date": "01 авг",
       "dir": "in"
-    },
-    {
-      "title": "Перевод на карту 220027******4399",
-      "amount": 1590.0,
-      "date": "01 авг",
-      "dir": "out"
     }
   ]
 }
