@@ -1,12 +1,12 @@
 {
-  "updated": "06.08.2026 08:00",
+  "updated": "06.08.2026 09:00",
   "period": "Август 2026",
-  "balance": 4345.11,
-  "income_total": 19618,
-  "income_count": 9,
+  "balance": 5824.11,
+  "income_total": 21097,
+  "income_count": 10,
   "expense_total": 16971,
   "expense_count": 29,
-  "net": 2647,
+  "net": 4126,
   "reserve_target": 101826,
   "categories": [
     {
@@ -49,7 +49,7 @@
     0,
     13000,
     0,
-    0
+    1479
   ],
   "expense_by_day": [
     2930,
@@ -60,6 +60,12 @@
     622
   ],
   "recent": [
+    {
+      "title": "Возврат: YANDEX*LAVKARIT",
+      "amount": 1479.0,
+      "date": "06 авг",
+      "dir": "in"
+    },
     {
       "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
       "amount": 49.99,
