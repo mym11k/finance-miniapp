@@ -1,18 +1,18 @@
 {
-  "updated": "07.08.2026 17:00",
+  "updated": "07.08.2026 18:00",
   "period": "Август 2026",
-  "balance": 762.13,
-  "income_total": 159097,
-  "income_count": 13,
-  "expense_total": 160033,
-  "expense_count": 40,
-  "net": -936,
-  "reserve_target": 960198,
+  "balance": 1062.13,
+  "income_total": 162097,
+  "income_count": 14,
+  "expense_total": 162733,
+  "expense_count": 45,
+  "net": -636,
+  "reserve_target": 976398,
   "categories": [
     {
       "name": "Прочее",
-      "total": 140752,
-      "count": 10
+      "total": 143452,
+      "count": 15
     },
     {
       "name": "Переводы",
@@ -61,7 +61,7 @@
     13000,
     0,
     1479,
-    138000
+    141000
   ],
   "expense_by_day": [
     2930,
@@ -70,9 +70,45 @@
     1022,
     7092,
     4531,
-    139153
+    141853
   ],
   "recent": [
+    {
+      "title": "Лимонтир 41_S_QR",
+      "amount": 1200.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Лимонтир 41_S_QR",
+      "amount": 300.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Лимонтир 41_S_QR",
+      "amount": 300.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Лимонтир 41_S_QR",
+      "amount": 600.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: C2C PSB M F",
+      "amount": 3000.0,
+      "date": "07 авг",
+      "dir": "in"
+    },
+    {
+      "title": "Лимонтир 41_S_QR",
+      "amount": 300.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
     {
       "title": "Yandex*360",
       "amount": 499.0,
@@ -274,42 +310,6 @@
     {
       "title": "Северок._P_QR",
       "amount": 731.0,
-      "date": "02 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 863.0,
-      "date": "02 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод на карту 220220******6766",
-      "amount": 1075.0,
-      "date": "02 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 546.0,
-      "date": "02 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод: C2C PSB M F",
-      "amount": 5000.0,
-      "date": "02 авг",
-      "dir": "in"
-    },
-    {
-      "title": "Магазин 26647",
-      "amount": 49.99,
-      "date": "02 авг",
-      "dir": "out"
-    },
-    {
-      "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
-      "amount": 49.99,
       "date": "02 авг",
       "dir": "out"
     }
