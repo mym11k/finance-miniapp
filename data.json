@@ -1,13 +1,13 @@
 {
-  "updated": "07.08.2026 09:00",
+  "updated": "07.08.2026 10:00",
   "period": "Август 2026",
-  "balance": 1915.11,
+  "balance": 1205.11,
   "income_total": 21097,
   "income_count": 10,
-  "expense_total": 20880,
-  "expense_count": 32,
-  "net": 217,
-  "reserve_target": 125280,
+  "expense_total": 21590,
+  "expense_count": 33,
+  "net": -493,
+  "reserve_target": 129540,
   "categories": [
     {
       "name": "Переводы",
@@ -30,13 +30,13 @@
       "count": 6
     },
     {
-      "name": "Игры",
-      "total": 203,
-      "count": 1
+      "name": "Связь",
+      "total": 800,
+      "count": 2
     },
     {
-      "name": "Связь",
-      "total": 90,
+      "name": "Игры",
+      "total": 203,
       "count": 1
     }
   ],
@@ -46,7 +46,8 @@
     "03",
     "04",
     "05",
-    "06"
+    "06",
+    "07"
   ],
   "income_by_day": [
     1518,
@@ -54,7 +55,8 @@
     0,
     13000,
     0,
-    1479
+    1479,
+    0
   ],
   "expense_by_day": [
     2930,
@@ -62,9 +64,16 @@
     1719,
     1022,
     7092,
-    4531
+    4531,
+    710
   ],
   "recent": [
+    {
+      "title": "INTERSVYAZ",
+      "amount": 710.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
     {
       "title": "t2 (Россия): +7 904 9757615",
       "amount": 90.0,
@@ -296,12 +305,6 @@
     {
       "title": "ПЯТЕРОЧКА 9991_P_QR",
       "amount": 79.99,
-      "date": "01 авг",
-      "dir": "out"
-    },
-    {
-      "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
-      "amount": 49.99,
       "date": "01 авг",
       "dir": "out"
     }
