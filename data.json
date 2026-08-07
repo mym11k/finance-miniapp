@@ -1,13 +1,13 @@
 {
-  "updated": "07.08.2026 10:00",
+  "updated": "07.08.2026 11:00",
   "period": "Август 2026",
-  "balance": 1205.11,
+  "balance": 486.12,
   "income_total": 21097,
   "income_count": 10,
-  "expense_total": 21590,
-  "expense_count": 33,
-  "net": -493,
-  "reserve_target": 129540,
+  "expense_total": 22309,
+  "expense_count": 35,
+  "net": -1212,
+  "reserve_target": 133854,
   "categories": [
     {
       "name": "Переводы",
@@ -21,13 +21,13 @@
     },
     {
       "name": "Такси",
-      "total": 3630,
-      "count": 9
+      "total": 4259,
+      "count": 10
     },
     {
       "name": "Прочее",
-      "total": 3572,
-      "count": 6
+      "total": 3662,
+      "count": 7
     },
     {
       "name": "Связь",
@@ -65,9 +65,21 @@
     1022,
     7092,
     4531,
-    710
+    1429
   ],
   "recent": [
+    {
+      "title": "Магазин 26647",
+      "amount": 89.99,
+      "date": "07 авг",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 629.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
     {
       "title": "INTERSVYAZ",
       "amount": 710.0,
@@ -293,18 +305,6 @@
     {
       "title": "Магазин 15166",
       "amount": 325.46,
-      "date": "01 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 192.0,
-      "date": "01 авг",
-      "dir": "out"
-    },
-    {
-      "title": "ПЯТЕРОЧКА 9991_P_QR",
-      "amount": 79.99,
       "date": "01 авг",
       "dir": "out"
     }
