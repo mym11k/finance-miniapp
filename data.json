@@ -1,13 +1,13 @@
 {
-  "updated": "07.08.2026 15:00",
+  "updated": "07.08.2026 16:00",
   "period": "Август 2026",
-  "balance": 1261.13,
+  "balance": 762.13,
   "income_total": 159097,
   "income_count": 13,
-  "expense_total": 159534,
-  "expense_count": 39,
-  "net": -437,
-  "reserve_target": 957204,
+  "expense_total": 160033,
+  "expense_count": 40,
+  "net": -936,
+  "reserve_target": 960198,
   "categories": [
     {
       "name": "Прочее",
@@ -33,6 +33,11 @@
       "name": "Связь",
       "total": 800,
       "count": 2
+    },
+    {
+      "name": "Подписки",
+      "total": 499,
+      "count": 1
     },
     {
       "name": "Игры",
@@ -65,9 +70,15 @@
     1022,
     7092,
     4531,
-    138654
+    139153
   ],
   "recent": [
+    {
+      "title": "Yandex*360",
+      "amount": 499.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
     {
       "title": "DNS 1948_P_QR",
       "amount": 44090.0,
@@ -301,12 +312,6 @@
       "amount": 49.99,
       "date": "02 авг",
       "dir": "out"
-    },
-    {
-      "title": "Перевод: SBOL",
-      "amount": 100.0,
-      "date": "02 авг",
-      "dir": "in"
     }
   ]
 }
