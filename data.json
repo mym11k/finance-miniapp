@@ -1,14 +1,19 @@
 {
-  "updated": "07.08.2026 14:00",
+  "updated": "07.08.2026 15:00",
   "period": "Август 2026",
-  "balance": 351.13,
-  "income_total": 21097,
-  "income_count": 10,
-  "expense_total": 22444,
-  "expense_count": 36,
-  "net": -1347,
-  "reserve_target": 134664,
+  "balance": 1261.13,
+  "income_total": 159097,
+  "income_count": 13,
+  "expense_total": 159534,
+  "expense_count": 39,
+  "net": -437,
+  "reserve_target": 957204,
   "categories": [
+    {
+      "name": "Прочее",
+      "total": 140752,
+      "count": 10
+    },
     {
       "name": "Переводы",
       "total": 7390,
@@ -23,11 +28,6 @@
       "name": "Такси",
       "total": 4259,
       "count": 10
-    },
-    {
-      "name": "Прочее",
-      "total": 3662,
-      "count": 7
     },
     {
       "name": "Связь",
@@ -56,7 +56,7 @@
     13000,
     0,
     1479,
-    0
+    138000
   ],
   "expense_by_day": [
     2930,
@@ -65,9 +65,45 @@
     1022,
     7092,
     4531,
-    1564
+    138654
   ],
   "recent": [
+    {
+      "title": "DNS 1948_P_QR",
+      "amount": 44090.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: C2C PSB M F",
+      "amount": 44000.0,
+      "date": "07 авг",
+      "dir": "in"
+    },
+    {
+      "title": "DNS 1948_P_QR",
+      "amount": 44000.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: C2C PSB M F",
+      "amount": 44000.0,
+      "date": "07 авг",
+      "dir": "in"
+    },
+    {
+      "title": "DNS 1948_P_QR",
+      "amount": 49000.0,
+      "date": "07 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: C2C PSB M F",
+      "amount": 50000.0,
+      "date": "07 авг",
+      "dir": "in"
+    },
     {
       "title": "Лента- 976",
       "amount": 134.99,
@@ -271,42 +307,6 @@
       "amount": 100.0,
       "date": "02 авг",
       "dir": "in"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 271.0,
-      "date": "02 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 400.0,
-      "date": "01 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 68.0,
-      "date": "01 авг",
-      "dir": "in"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 68.0,
-      "date": "01 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод: SBOL",
-      "amount": 450.0,
-      "date": "01 авг",
-      "dir": "in"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 225.0,
-      "date": "01 авг",
-      "dir": "out"
     }
   ]
 }
