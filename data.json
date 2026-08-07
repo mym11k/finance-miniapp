@@ -1,13 +1,13 @@
 {
-  "updated": "07.08.2026 13:00",
+  "updated": "07.08.2026 14:00",
   "period": "Август 2026",
-  "balance": 486.12,
+  "balance": 351.13,
   "income_total": 21097,
   "income_count": 10,
-  "expense_total": 22309,
-  "expense_count": 35,
-  "net": -1212,
-  "reserve_target": 133854,
+  "expense_total": 22444,
+  "expense_count": 36,
+  "net": -1347,
+  "reserve_target": 134664,
   "categories": [
     {
       "name": "Переводы",
@@ -16,8 +16,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 5995,
-      "count": 11
+      "total": 6130,
+      "count": 12
     },
     {
       "name": "Такси",
@@ -65,9 +65,15 @@
     1022,
     7092,
     4531,
-    1429
+    1564
   ],
   "recent": [
+    {
+      "title": "Лента- 976",
+      "amount": 134.99,
+      "date": "07 авг",
+      "dir": "out"
+    },
     {
       "title": "Магазин 26647",
       "amount": 89.99,
@@ -299,12 +305,6 @@
     {
       "title": "YANDEX*FASTEN",
       "amount": 225.0,
-      "date": "01 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Магазин 15166",
-      "amount": 325.46,
       "date": "01 авг",
       "dir": "out"
     }
