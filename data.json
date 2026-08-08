@@ -1,18 +1,18 @@
 {
-  "updated": "08.08.2026 05:00",
+  "updated": "08.08.2026 07:00",
   "period": "Август 2026",
-  "balance": 1062.13,
+  "balance": 144.15,
   "income_total": 162097,
   "income_count": 14,
-  "expense_total": 162733,
-  "expense_count": 45,
-  "net": -636,
-  "reserve_target": 976398,
+  "expense_total": 163651,
+  "expense_count": 47,
+  "net": -1554,
+  "reserve_target": 981906,
   "categories": [
     {
       "name": "Прочее",
-      "total": 143452,
-      "count": 15
+      "total": 143579,
+      "count": 16
     },
     {
       "name": "Переводы",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Такси",
-      "total": 4259,
-      "count": 10
+      "total": 5050,
+      "count": 11
     },
     {
       "name": "Связь",
@@ -52,7 +52,8 @@
     "04",
     "05",
     "06",
-    "07"
+    "07",
+    "08"
   ],
   "income_by_day": [
     1518,
@@ -61,7 +62,8 @@
     13000,
     0,
     1479,
-    141000
+    141000,
+    0
   ],
   "expense_by_day": [
     2930,
@@ -70,9 +72,22 @@
     1022,
     7092,
     4531,
-    141853
+    141853,
+    918
   ],
   "recent": [
+    {
+      "title": "Магазин 26647",
+      "amount": 126.98,
+      "date": "08 авг",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 791.0,
+      "date": "08 авг",
+      "dir": "out"
+    },
     {
       "title": "Лимонтир 41_S_QR",
       "amount": 1200.0,
@@ -299,18 +314,6 @@
       "title": "BEST PRICE Ltd",
       "amount": 286.0,
       "date": "03 авг",
-      "dir": "out"
-    },
-    {
-      "title": "ПЯТЕРОЧКА 9991_P_QR",
-      "amount": 1198.89,
-      "date": "03 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Северок._P_QR",
-      "amount": 731.0,
-      "date": "02 авг",
       "dir": "out"
     }
   ]
