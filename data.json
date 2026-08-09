@@ -1,12 +1,12 @@
 {
-  "updated": "09.08.2026 16:00",
+  "updated": "09.08.2026 17:00",
   "period": "Август 2026",
-  "balance": 44.17,
-  "income_total": 162097,
-  "income_count": 14,
+  "balance": 1044.17,
+  "income_total": 163097,
+  "income_count": 15,
   "expense_total": 163751,
   "expense_count": 48,
-  "net": -1654,
+  "net": -654,
   "reserve_target": 982506,
   "categories": [
     {
@@ -65,7 +65,7 @@
     1479,
     141000,
     0,
-    0
+    1000
   ],
   "expense_by_day": [
     2930,
@@ -79,6 +79,12 @@
     100
   ],
   "recent": [
+    {
+      "title": "Перевод: SBOL",
+      "amount": 1000.0,
+      "date": "09 авг",
+      "dir": "in"
+    },
     {
       "title": "Магазин 1049",
       "amount": 99.98,
@@ -311,12 +317,6 @@
       "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
       "amount": 49.99,
       "date": "04 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Северок._P_QR",
-      "amount": 234.0,
-      "date": "03 авг",
       "dir": "out"
     }
   ]
