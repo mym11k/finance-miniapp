@@ -1,13 +1,13 @@
 {
-  "updated": "09.08.2026 19:00",
+  "updated": "09.08.2026 21:00",
   "period": "Август 2026",
-  "balance": 1044.17,
+  "balance": 227.17,
   "income_total": 163097,
   "income_count": 15,
-  "expense_total": 163751,
-  "expense_count": 48,
-  "net": -654,
-  "reserve_target": 982506,
+  "expense_total": 164568,
+  "expense_count": 50,
+  "net": -1471,
+  "reserve_target": 987408,
   "categories": [
     {
       "name": "Прочее",
@@ -21,8 +21,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 6130,
-      "count": 12
+      "total": 6947,
+      "count": 14
     },
     {
       "name": "Такси",
@@ -76,9 +76,21 @@
     4531,
     141853,
     918,
-    100
+    917
   ],
   "recent": [
+    {
+      "title": "Северок._P_QR",
+      "amount": 290.0,
+      "date": "09 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Северок._P_QR",
+      "amount": 527.0,
+      "date": "09 авг",
+      "dir": "out"
+    },
     {
       "title": "Перевод: SBOL",
       "amount": 1000.0,
@@ -304,18 +316,6 @@
     {
       "title": "Магазин 26647",
       "amount": 174.97,
-      "date": "04 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод: SBOL",
-      "amount": 200.0,
-      "date": "04 авг",
-      "dir": "in"
-    },
-    {
-      "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
-      "amount": 49.99,
       "date": "04 авг",
       "dir": "out"
     }
