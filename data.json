@@ -1,18 +1,18 @@
 {
-  "updated": "09.08.2026 15:00",
+  "updated": "09.08.2026 16:00",
   "period": "Август 2026",
-  "balance": 144.15,
+  "balance": 44.17,
   "income_total": 162097,
   "income_count": 14,
-  "expense_total": 163651,
-  "expense_count": 47,
-  "net": -1554,
-  "reserve_target": 981906,
+  "expense_total": 163751,
+  "expense_count": 48,
+  "net": -1654,
+  "reserve_target": 982506,
   "categories": [
     {
       "name": "Прочее",
-      "total": 143579,
-      "count": 16
+      "total": 143679,
+      "count": 17
     },
     {
       "name": "Переводы",
@@ -53,7 +53,8 @@
     "05",
     "06",
     "07",
-    "08"
+    "08",
+    "09"
   ],
   "income_by_day": [
     1518,
@@ -63,6 +64,7 @@
     0,
     1479,
     141000,
+    0,
     0
   ],
   "expense_by_day": [
@@ -73,9 +75,16 @@
     7092,
     4531,
     141853,
-    918
+    918,
+    100
   ],
   "recent": [
+    {
+      "title": "Магазин 1049",
+      "amount": 99.98,
+      "date": "09 авг",
+      "dir": "out"
+    },
     {
       "title": "Магазин 26647",
       "amount": 126.98,
@@ -307,12 +316,6 @@
     {
       "title": "Северок._P_QR",
       "amount": 234.0,
-      "date": "03 авг",
-      "dir": "out"
-    },
-    {
-      "title": "BEST PRICE Ltd",
-      "amount": 286.0,
       "date": "03 авг",
       "dir": "out"
     }
