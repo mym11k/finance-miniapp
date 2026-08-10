@@ -1,13 +1,13 @@
 {
-  "updated": "10.08.2026 09:00",
+  "updated": "10.08.2026 10:00",
   "period": "Август 2026",
-  "balance": 227.17,
-  "income_total": 163097,
-  "income_count": 15,
-  "expense_total": 164568,
-  "expense_count": 50,
-  "net": -1471,
-  "reserve_target": 987408,
+  "balance": 5069.17,
+  "income_total": 169097,
+  "income_count": 16,
+  "expense_total": 165726,
+  "expense_count": 51,
+  "net": 3371,
+  "reserve_target": 994356,
   "categories": [
     {
       "name": "Прочее",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Такси",
-      "total": 5050,
-      "count": 11
+      "total": 6208,
+      "count": 12
     },
     {
       "name": "Связь",
@@ -54,7 +54,8 @@
     "06",
     "07",
     "08",
-    "09"
+    "09",
+    "10"
   ],
   "income_by_day": [
     1518,
@@ -65,7 +66,8 @@
     1479,
     141000,
     0,
-    1000
+    1000,
+    6000
   ],
   "expense_by_day": [
     2930,
@@ -76,9 +78,22 @@
     4531,
     141853,
     918,
-    917
+    917,
+    1158
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 1158.0,
+      "date": "10 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: C2C PSB M F",
+      "amount": 6000.0,
+      "date": "10 авг",
+      "dir": "in"
+    },
     {
       "title": "Северок._P_QR",
       "amount": 290.0,
@@ -304,18 +319,6 @@
     {
       "title": "Магазин 31687",
       "amount": 237.0,
-      "date": "04 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод: T-Bank Card2Card",
-      "amount": 300.0,
-      "date": "04 авг",
-      "dir": "in"
-    },
-    {
-      "title": "Магазин 26647",
-      "amount": 174.97,
       "date": "04 авг",
       "dir": "out"
     }
