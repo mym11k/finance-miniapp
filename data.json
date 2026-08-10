@@ -1,13 +1,13 @@
 {
-  "updated": "10.08.2026 14:00",
+  "updated": "10.08.2026 15:00",
   "period": "Август 2026",
-  "balance": 5069.17,
+  "balance": 389.17,
   "income_total": 169097,
   "income_count": 16,
-  "expense_total": 165726,
-  "expense_count": 51,
-  "net": 3371,
-  "reserve_target": 994356,
+  "expense_total": 170406,
+  "expense_count": 52,
+  "net": -1309,
+  "reserve_target": 1022436,
   "categories": [
     {
       "name": "Прочее",
@@ -16,8 +16,8 @@
     },
     {
       "name": "Переводы",
-      "total": 7390,
-      "count": 4
+      "total": 12070,
+      "count": 5
     },
     {
       "name": "Еда и доставка",
@@ -79,9 +79,15 @@
     141853,
     918,
     917,
-    1158
+    5838
   ],
   "recent": [
+    {
+      "title": "Перевод на карту 427672******3031",
+      "amount": 4680.0,
+      "date": "10 авг",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 1158.0,
@@ -315,12 +321,6 @@
       "amount": 2500.0,
       "date": "04 авг",
       "dir": "in"
-    },
-    {
-      "title": "Магазин 31687",
-      "amount": 237.0,
-      "date": "04 авг",
-      "dir": "out"
     }
   ]
 }
