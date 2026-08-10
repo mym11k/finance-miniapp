@@ -1,12 +1,12 @@
 {
-  "updated": "10.08.2026 20:00",
+  "updated": "10.08.2026 21:00",
   "period": "Август 2026",
-  "balance": 389.17,
-  "income_total": 169097,
-  "income_count": 16,
+  "balance": 3389.17,
+  "income_total": 172097,
+  "income_count": 17,
   "expense_total": 170406,
   "expense_count": 52,
-  "net": -1309,
+  "net": 1691,
   "reserve_target": 1022436,
   "categories": [
     {
@@ -67,7 +67,7 @@
     141000,
     0,
     1000,
-    6000
+    9000
   ],
   "expense_by_day": [
     2930,
@@ -82,6 +82,12 @@
     5838
   ],
   "recent": [
+    {
+      "title": "Перевод: SBOL",
+      "amount": 3000.0,
+      "date": "10 авг",
+      "dir": "in"
+    },
     {
       "title": "Перевод на карту 427672******3031",
       "amount": 4680.0,
@@ -315,12 +321,6 @@
       "amount": 560.0,
       "date": "04 авг",
       "dir": "out"
-    },
-    {
-      "title": "Перевод: C2C PSB M F",
-      "amount": 2500.0,
-      "date": "04 авг",
-      "dir": "in"
     }
   ]
 }
