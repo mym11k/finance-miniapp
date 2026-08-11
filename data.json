@@ -1,18 +1,18 @@
 {
-  "updated": "11.08.2026 14:00",
+  "updated": "11.08.2026 15:00",
   "period": "Август 2026",
-  "balance": 176.25,
-  "income_total": 172097,
-  "income_count": 17,
-  "expense_total": 173619,
-  "expense_count": 55,
-  "net": -1522,
-  "reserve_target": 1041714,
+  "balance": 1276.25,
+  "income_total": 174097,
+  "income_count": 18,
+  "expense_total": 174519,
+  "expense_count": 56,
+  "net": -422,
+  "reserve_target": 1047114,
   "categories": [
     {
       "name": "Прочее",
-      "total": 144087,
-      "count": 18
+      "total": 144987,
+      "count": 19
     },
     {
       "name": "Переводы",
@@ -74,7 +74,7 @@
     0,
     1000,
     9000,
-    0
+    2000
   ],
   "expense_by_day": [
     2930,
@@ -87,9 +87,21 @@
     918,
     917,
     5838,
-    3213
+    4113
   ],
   "recent": [
+    {
+      "title": "ИП Соколов А.А._QR",
+      "amount": 900.0,
+      "date": "11 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: C2C PSB M F",
+      "amount": 2000.0,
+      "date": "11 авг",
+      "dir": "in"
+    },
     {
       "title": "DODO PIZZA KOPEYSK-1",
       "amount": 1910.0,
@@ -315,18 +327,6 @@
     {
       "title": "YANDEX*LAVKARIT",
       "amount": 1479.0,
-      "date": "05 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Северок._P_QR",
-      "amount": 752.0,
-      "date": "05 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 493.0,
       "date": "05 авг",
       "dir": "out"
     }
