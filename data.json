@@ -1,13 +1,13 @@
 {
-  "updated": "11.08.2026 13:00",
+  "updated": "11.08.2026 14:00",
   "period": "Август 2026",
-  "balance": 2086.25,
+  "balance": 176.25,
   "income_total": 172097,
   "income_count": 17,
-  "expense_total": 171709,
-  "expense_count": 54,
-  "net": 388,
-  "reserve_target": 1030254,
+  "expense_total": 173619,
+  "expense_count": 55,
+  "net": -1522,
+  "reserve_target": 1041714,
   "categories": [
     {
       "name": "Прочее",
@@ -28,6 +28,11 @@
       "name": "Еда и доставка",
       "total": 6947,
       "count": 14
+    },
+    {
+      "name": "Кафе",
+      "total": 1910,
+      "count": 1
     },
     {
       "name": "Связь",
@@ -82,9 +87,15 @@
     918,
     917,
     5838,
-    1303
+    3213
   ],
   "recent": [
+    {
+      "title": "DODO PIZZA KOPEYSK-1",
+      "amount": 1910.0,
+      "date": "11 авг",
+      "dir": "out"
+    },
     {
       "title": "Магазин 26647",
       "amount": 407.92,
@@ -316,12 +327,6 @@
     {
       "title": "YANDEX*FASTEN",
       "amount": 493.0,
-      "date": "05 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод на карту 220015******1796",
-      "amount": 4165.0,
       "date": "05 авг",
       "dir": "out"
     }
