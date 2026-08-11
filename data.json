@@ -1,13 +1,13 @@
 {
-  "updated": "11.08.2026 18:00",
+  "updated": "11.08.2026 19:00",
   "period": "Август 2026",
-  "balance": 1276.25,
+  "balance": 782.25,
   "income_total": 174097,
   "income_count": 18,
-  "expense_total": 174519,
-  "expense_count": 56,
-  "net": -422,
-  "reserve_target": 1047114,
+  "expense_total": 175013,
+  "expense_count": 57,
+  "net": -916,
+  "reserve_target": 1050078,
   "categories": [
     {
       "name": "Прочее",
@@ -21,8 +21,8 @@
     },
     {
       "name": "Такси",
-      "total": 7103,
-      "count": 13
+      "total": 7597,
+      "count": 14
     },
     {
       "name": "Еда и доставка",
@@ -87,9 +87,15 @@
     918,
     917,
     5838,
-    4113
+    4607
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 494.0,
+      "date": "11 авг",
+      "dir": "out"
+    },
     {
       "title": "ИП Соколов А.А._QR",
       "amount": 900.0,
@@ -321,12 +327,6 @@
     {
       "title": "Playerok",
       "amount": 202.98,
-      "date": "05 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*LAVKARIT",
-      "amount": 1479.0,
       "date": "05 авг",
       "dir": "out"
     }
