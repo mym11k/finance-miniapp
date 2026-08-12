@@ -1,18 +1,18 @@
 {
-  "updated": "12.08.2026 13:00",
+  "updated": "12.08.2026 14:00",
   "period": "Август 2026",
-  "balance": 121.25,
-  "income_total": 174097,
-  "income_count": 18,
-  "expense_total": 175674,
-  "expense_count": 58,
-  "net": -1577,
-  "reserve_target": 1054044,
+  "balance": 281.29,
+  "income_total": 174432,
+  "income_count": 19,
+  "expense_total": 175849,
+  "expense_count": 59,
+  "net": -1417,
+  "reserve_target": 1055094,
   "categories": [
     {
       "name": "Прочее",
-      "total": 144987,
-      "count": 19
+      "total": 145162,
+      "count": 20
     },
     {
       "name": "Переводы",
@@ -76,7 +76,7 @@
     1000,
     9000,
     2000,
-    0
+    335
   ],
   "expense_by_day": [
     2930,
@@ -90,9 +90,21 @@
     917,
     5838,
     4607,
-    661
+    836
   ],
   "recent": [
+    {
+      "title": "Магазин 26647",
+      "amount": 174.96,
+      "date": "12 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: YM *ozon_finance",
+      "amount": 335.0,
+      "date": "12 авг",
+      "dir": "in"
+    },
     {
       "title": "YANDEX*LAVKARIT",
       "amount": 661.0,
@@ -320,18 +332,6 @@
       "amount": 1479.0,
       "date": "06 авг",
       "dir": "in"
-    },
-    {
-      "title": "КРАСНОЕ&БЕЛОЕ_P_QR",
-      "amount": 49.99,
-      "date": "06 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 572.0,
-      "date": "06 авг",
-      "dir": "out"
     }
   ]
 }
