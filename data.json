@@ -1,13 +1,13 @@
 {
-  "updated": "13.08.2026 19:00",
+  "updated": "13.08.2026 20:00",
   "period": "Август 2026",
-  "balance": 3060.29,
+  "balance": 2568.53,
   "income_total": 177432,
   "income_count": 20,
-  "expense_total": 176070,
-  "expense_count": 60,
-  "net": 1362,
-  "reserve_target": 1056420,
+  "expense_total": 176562,
+  "expense_count": 61,
+  "net": 870,
+  "reserve_target": 1059372,
   "categories": [
     {
       "name": "Прочее",
@@ -21,8 +21,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 7829,
-      "count": 16
+      "total": 8321,
+      "count": 17
     },
     {
       "name": "Такси",
@@ -93,9 +93,15 @@
     5838,
     4607,
     836,
-    221
+    713
   ],
   "recent": [
+    {
+      "title": "Лента-0154",
+      "amount": 491.76,
+      "date": "13 авг",
+      "dir": "out"
+    },
     {
       "title": "Перевод: C2C PSB M F",
       "amount": 3000.0,
@@ -327,12 +333,6 @@
     {
       "title": "t2 (Россия): +7 904 9757615",
       "amount": 90.0,
-      "date": "06 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Yablonya_QR",
-      "amount": 2499.0,
       "date": "06 авг",
       "dir": "out"
     }
