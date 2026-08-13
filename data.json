@@ -1,12 +1,12 @@
 {
-  "updated": "13.08.2026 17:00",
+  "updated": "13.08.2026 18:00",
   "period": "Август 2026",
-  "balance": 60.29,
-  "income_total": 174432,
-  "income_count": 19,
+  "balance": 3060.29,
+  "income_total": 177432,
+  "income_count": 20,
   "expense_total": 176070,
   "expense_count": 60,
-  "net": -1638,
+  "net": 1362,
   "reserve_target": 1056420,
   "categories": [
     {
@@ -78,7 +78,7 @@
     9000,
     2000,
     335,
-    0
+    3000
   ],
   "expense_by_day": [
     2930,
@@ -96,6 +96,12 @@
     221
   ],
   "recent": [
+    {
+      "title": "Перевод: C2C PSB M F",
+      "amount": 3000.0,
+      "date": "13 авг",
+      "dir": "in"
+    },
     {
       "title": "YANDEX*LAVKARIT",
       "amount": 221.0,
@@ -327,12 +333,6 @@
     {
       "title": "Yablonya_QR",
       "amount": 2499.0,
-      "date": "06 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*LAVKARIT",
-      "amount": 1320.0,
       "date": "06 авг",
       "dir": "out"
     }
