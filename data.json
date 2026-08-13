@@ -1,13 +1,13 @@
 {
-  "updated": "13.08.2026 13:00",
+  "updated": "13.08.2026 14:00",
   "period": "Август 2026",
-  "balance": 281.29,
+  "balance": 60.29,
   "income_total": 174432,
   "income_count": 19,
-  "expense_total": 175849,
-  "expense_count": 59,
-  "net": -1417,
-  "reserve_target": 1055094,
+  "expense_total": 176070,
+  "expense_count": 60,
+  "net": -1638,
+  "reserve_target": 1056420,
   "categories": [
     {
       "name": "Прочее",
@@ -21,8 +21,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 7608,
-      "count": 15
+      "total": 7829,
+      "count": 16
     },
     {
       "name": "Такси",
@@ -62,7 +62,8 @@
     "09",
     "10",
     "11",
-    "12"
+    "12",
+    "13"
   ],
   "income_by_day": [
     1518,
@@ -76,7 +77,8 @@
     1000,
     9000,
     2000,
-    335
+    335,
+    0
   ],
   "expense_by_day": [
     2930,
@@ -90,9 +92,16 @@
     917,
     5838,
     4607,
-    836
+    836,
+    221
   ],
   "recent": [
+    {
+      "title": "YANDEX*LAVKARIT",
+      "amount": 221.0,
+      "date": "13 авг",
+      "dir": "out"
+    },
     {
       "title": "Магазин 26647",
       "amount": 174.96,
@@ -326,12 +335,6 @@
       "amount": 1320.0,
       "date": "06 авг",
       "dir": "out"
-    },
-    {
-      "title": "Возврат: YANDEX*LAVKARIT",
-      "amount": 1479.0,
-      "date": "06 авг",
-      "dir": "in"
     }
   ]
 }
