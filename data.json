@@ -1,18 +1,18 @@
 {
-  "updated": "14.08.2026 11:00",
+  "updated": "14.08.2026 12:00",
   "period": "Август 2026",
-  "balance": 2568.53,
+  "balance": 386.63,
   "income_total": 177432,
   "income_count": 20,
-  "expense_total": 176562,
-  "expense_count": 61,
-  "net": 870,
-  "reserve_target": 1059372,
+  "expense_total": 178744,
+  "expense_count": 63,
+  "net": -1312,
+  "reserve_target": 1072464,
   "categories": [
     {
       "name": "Прочее",
-      "total": 145162,
-      "count": 20
+      "total": 147344,
+      "count": 22
     },
     {
       "name": "Переводы",
@@ -63,7 +63,8 @@
     "10",
     "11",
     "12",
-    "13"
+    "13",
+    "14"
   ],
   "income_by_day": [
     1518,
@@ -78,7 +79,8 @@
     9000,
     2000,
     335,
-    3000
+    3000,
+    0
   ],
   "expense_by_day": [
     2930,
@@ -93,9 +95,22 @@
     5838,
     4607,
     836,
-    713
+    713,
+    2182
   ],
   "recent": [
+    {
+      "title": "Ч74136_P_QR",
+      "amount": 373.0,
+      "date": "14 авг",
+      "dir": "out"
+    },
+    {
+      "title": "apteka YUnona",
+      "amount": 1808.9,
+      "date": "14 авг",
+      "dir": "out"
+    },
     {
       "title": "Лента-0154",
       "amount": 491.76,
@@ -322,18 +337,6 @@
       "title": "YANDEX*FASTEN",
       "amount": 629.0,
       "date": "07 авг",
-      "dir": "out"
-    },
-    {
-      "title": "INTERSVYAZ",
-      "amount": 710.0,
-      "date": "07 авг",
-      "dir": "out"
-    },
-    {
-      "title": "t2 (Россия): +7 904 9757615",
-      "amount": 90.0,
-      "date": "06 авг",
       "dir": "out"
     }
   ]
