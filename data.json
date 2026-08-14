@@ -1,13 +1,13 @@
 {
-  "updated": "14.08.2026 19:00",
+  "updated": "14.08.2026 20:00",
   "period": "Август 2026",
-  "balance": 1756.69,
+  "balance": 1655.69,
   "income_total": 179432,
   "income_count": 21,
-  "expense_total": 179374,
-  "expense_count": 64,
-  "net": 58,
-  "reserve_target": 1076244,
+  "expense_total": 179475,
+  "expense_count": 65,
+  "net": -43,
+  "reserve_target": 1076850,
   "categories": [
     {
       "name": "Прочее",
@@ -21,8 +21,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 8951,
-      "count": 18
+      "total": 9052,
+      "count": 19
     },
     {
       "name": "Такси",
@@ -96,9 +96,15 @@
     4607,
     836,
     713,
-    2812
+    2913
   ],
   "recent": [
+    {
+      "title": "Северок._P_QR",
+      "amount": 101.0,
+      "date": "14 авг",
+      "dir": "out"
+    },
     {
       "title": "ПЯТЕРОЧКА 9991_P_QR",
       "amount": 629.94,
@@ -332,12 +338,6 @@
       "amount": 50000.0,
       "date": "07 авг",
       "dir": "in"
-    },
-    {
-      "title": "Лента- 976",
-      "amount": 134.99,
-      "date": "07 авг",
-      "dir": "out"
     }
   ]
 }
