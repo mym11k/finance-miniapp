@@ -1,13 +1,13 @@
 {
-  "updated": "14.08.2026 17:00",
+  "updated": "14.08.2026 18:00",
   "period": "Август 2026",
-  "balance": 386.63,
-  "income_total": 177432,
-  "income_count": 20,
-  "expense_total": 178744,
-  "expense_count": 63,
-  "net": -1312,
-  "reserve_target": 1072464,
+  "balance": 1756.69,
+  "income_total": 179432,
+  "income_count": 21,
+  "expense_total": 179374,
+  "expense_count": 64,
+  "net": 58,
+  "reserve_target": 1076244,
   "categories": [
     {
       "name": "Прочее",
@@ -21,8 +21,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 8321,
-      "count": 17
+      "total": 8951,
+      "count": 18
     },
     {
       "name": "Такси",
@@ -80,7 +80,7 @@
     2000,
     335,
     3000,
-    0
+    2000
   ],
   "expense_by_day": [
     2930,
@@ -96,9 +96,21 @@
     4607,
     836,
     713,
-    2182
+    2812
   ],
   "recent": [
+    {
+      "title": "ПЯТЕРОЧКА 9991_P_QR",
+      "amount": 629.94,
+      "date": "14 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 2000.0,
+      "date": "14 авг",
+      "dir": "in"
+    },
     {
       "title": "Ч74136_P_QR",
       "amount": 373.0,
@@ -324,18 +336,6 @@
     {
       "title": "Лента- 976",
       "amount": 134.99,
-      "date": "07 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Магазин 26647",
-      "amount": 89.99,
-      "date": "07 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 629.0,
       "date": "07 авг",
       "dir": "out"
     }
