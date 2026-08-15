@@ -1,13 +1,13 @@
 {
-  "updated": "15.08.2026 20:00",
+  "updated": "15.08.2026 21:00",
   "period": "Август 2026",
-  "balance": 2133.69,
+  "balance": 1915.69,
   "income_total": 181932,
   "income_count": 22,
-  "expense_total": 181497,
-  "expense_count": 67,
-  "net": 435,
-  "reserve_target": 1088982,
+  "expense_total": 181715,
+  "expense_count": 68,
+  "net": 217,
+  "reserve_target": 1090290,
   "categories": [
     {
       "name": "Прочее",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Такси",
-      "total": 7597,
-      "count": 14
+      "total": 7815,
+      "count": 15
     },
     {
       "name": "Кафе",
@@ -99,9 +99,15 @@
     836,
     713,
     2913,
-    2022
+    2240
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 218.0,
+      "date": "15 авг",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*LAVKARIT",
       "amount": 520.0,
@@ -335,12 +341,6 @@
       "amount": 44000.0,
       "date": "07 авг",
       "dir": "in"
-    },
-    {
-      "title": "DNS 1948_P_QR",
-      "amount": 44000.0,
-      "date": "07 авг",
-      "dir": "out"
     }
   ]
 }
