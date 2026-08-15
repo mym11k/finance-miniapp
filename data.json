@@ -1,13 +1,13 @@
 {
-  "updated": "15.08.2026 14:00",
+  "updated": "15.08.2026 15:00",
   "period": "Август 2026",
-  "balance": 2653.69,
+  "balance": 2133.69,
   "income_total": 181932,
   "income_count": 22,
-  "expense_total": 180977,
-  "expense_count": 66,
-  "net": 955,
-  "reserve_target": 1085862,
+  "expense_total": 181497,
+  "expense_count": 67,
+  "net": 435,
+  "reserve_target": 1088982,
   "categories": [
     {
       "name": "Прочее",
@@ -21,8 +21,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 10554,
-      "count": 20
+      "total": 11074,
+      "count": 21
     },
     {
       "name": "Такси",
@@ -99,9 +99,15 @@
     836,
     713,
     2913,
-    1502
+    2022
   ],
   "recent": [
+    {
+      "title": "YANDEX*LAVKARIT",
+      "amount": 520.0,
+      "date": "15 авг",
+      "dir": "out"
+    },
     {
       "title": "Перевод: SBOL",
       "amount": 2500.0,
@@ -335,12 +341,6 @@
       "amount": 44000.0,
       "date": "07 авг",
       "dir": "out"
-    },
-    {
-      "title": "Перевод: C2C PSB M F",
-      "amount": 44000.0,
-      "date": "07 авг",
-      "dir": "in"
     }
   ]
 }
