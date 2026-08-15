@@ -1,13 +1,13 @@
 {
-  "updated": "15.08.2026 09:00",
+  "updated": "15.08.2026 10:00",
   "period": "Август 2026",
-  "balance": 1655.69,
+  "balance": 153.69,
   "income_total": 179432,
   "income_count": 21,
-  "expense_total": 179475,
-  "expense_count": 65,
-  "net": -43,
-  "reserve_target": 1076850,
+  "expense_total": 180977,
+  "expense_count": 66,
+  "net": -1545,
+  "reserve_target": 1085862,
   "categories": [
     {
       "name": "Прочее",
@@ -21,8 +21,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 9052,
-      "count": 19
+      "total": 10554,
+      "count": 20
     },
     {
       "name": "Такси",
@@ -64,7 +64,8 @@
     "11",
     "12",
     "13",
-    "14"
+    "14",
+    "15"
   ],
   "income_by_day": [
     1518,
@@ -80,7 +81,8 @@
     2000,
     335,
     3000,
-    2000
+    2000,
+    0
   ],
   "expense_by_day": [
     2930,
@@ -96,9 +98,16 @@
     4607,
     836,
     713,
-    2913
+    2913,
+    1502
   ],
   "recent": [
+    {
+      "title": "YANDEX*LAVKARIT",
+      "amount": 1502.0,
+      "date": "15 авг",
+      "dir": "out"
+    },
     {
       "title": "Северок._P_QR",
       "amount": 101.0,
@@ -332,12 +341,6 @@
       "amount": 49000.0,
       "date": "07 авг",
       "dir": "out"
-    },
-    {
-      "title": "Перевод: C2C PSB M F",
-      "amount": 50000.0,
-      "date": "07 авг",
-      "dir": "in"
     }
   ]
 }
