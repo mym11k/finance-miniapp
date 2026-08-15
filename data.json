@@ -1,12 +1,12 @@
 {
-  "updated": "15.08.2026 13:00",
+  "updated": "15.08.2026 14:00",
   "period": "Август 2026",
-  "balance": 153.69,
-  "income_total": 179432,
-  "income_count": 21,
+  "balance": 2653.69,
+  "income_total": 181932,
+  "income_count": 22,
   "expense_total": 180977,
   "expense_count": 66,
-  "net": -1545,
+  "net": 955,
   "reserve_target": 1085862,
   "categories": [
     {
@@ -82,7 +82,7 @@
     335,
     3000,
     2000,
-    0
+    2500
   ],
   "expense_by_day": [
     2930,
@@ -102,6 +102,12 @@
     1502
   ],
   "recent": [
+    {
+      "title": "Перевод: SBOL",
+      "amount": 2500.0,
+      "date": "15 авг",
+      "dir": "in"
+    },
     {
       "title": "YANDEX*LAVKARIT",
       "amount": 1502.0,
@@ -335,12 +341,6 @@
       "amount": 44000.0,
       "date": "07 авг",
       "dir": "in"
-    },
-    {
-      "title": "DNS 1948_P_QR",
-      "amount": 49000.0,
-      "date": "07 авг",
-      "dir": "out"
     }
   ]
 }
