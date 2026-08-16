@@ -1,13 +1,13 @@
 {
-  "updated": "16.08.2026 17:00",
+  "updated": "16.08.2026 18:00",
   "period": "Август 2026",
-  "balance": 306.98,
+  "balance": 121.98,
   "income_total": 181932,
   "income_count": 22,
-  "expense_total": 183323,
-  "expense_count": 72,
-  "net": -1391,
-  "reserve_target": 1099938,
+  "expense_total": 183508,
+  "expense_count": 73,
+  "net": -1576,
+  "reserve_target": 1101048,
   "categories": [
     {
       "name": "Прочее",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Такси",
-      "total": 8586,
-      "count": 16
+      "total": 8771,
+      "count": 17
     },
     {
       "name": "Кафе",
@@ -102,9 +102,15 @@
     713,
     2913,
     2240,
-    1609
+    1794
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 185.0,
+      "date": "16 авг",
+      "dir": "out"
+    },
     {
       "title": "Магазин 26647",
       "amount": 260.96,
@@ -338,12 +344,6 @@
       "amount": 600.0,
       "date": "07 авг",
       "dir": "out"
-    },
-    {
-      "title": "Перевод: C2C PSB M F",
-      "amount": 3000.0,
-      "date": "07 авг",
-      "dir": "in"
     }
   ]
 }
