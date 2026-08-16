@@ -1,13 +1,13 @@
 {
-  "updated": "16.08.2026 12:00",
+  "updated": "16.08.2026 13:00",
   "period": "Август 2026",
-  "balance": 905.94,
+  "balance": 567.94,
   "income_total": 181932,
   "income_count": 22,
-  "expense_total": 182724,
-  "expense_count": 70,
-  "net": -792,
-  "reserve_target": 1096344,
+  "expense_total": 183062,
+  "expense_count": 71,
+  "net": -1130,
+  "reserve_target": 1098372,
   "categories": [
     {
       "name": "Прочее",
@@ -21,8 +21,8 @@
     },
     {
       "name": "Еда и доставка",
-      "total": 11074,
-      "count": 21
+      "total": 11412,
+      "count": 22
     },
     {
       "name": "Такси",
@@ -102,9 +102,15 @@
     713,
     2913,
     2240,
-    1010
+    1348
   ],
   "recent": [
+    {
+      "title": "YANDEX*LAVKARIT",
+      "amount": 338.0,
+      "date": "16 авг",
+      "dir": "out"
+    },
     {
       "title": "Магазин 26647",
       "amount": 238.75,
@@ -336,12 +342,6 @@
     {
       "title": "Лимонтир 41_S_QR",
       "amount": 300.0,
-      "date": "07 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Yandex*360",
-      "amount": 499.0,
       "date": "07 авг",
       "dir": "out"
     }
