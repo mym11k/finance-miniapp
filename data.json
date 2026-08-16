@@ -1,18 +1,18 @@
 {
-  "updated": "16.08.2026 18:00",
+  "updated": "16.08.2026 19:00",
   "period": "Август 2026",
-  "balance": 121.98,
-  "income_total": 181932,
-  "income_count": 22,
-  "expense_total": 183508,
-  "expense_count": 73,
-  "net": -1576,
-  "reserve_target": 1101048,
+  "balance": 741.98,
+  "income_total": 182932,
+  "income_count": 23,
+  "expense_total": 183888,
+  "expense_count": 74,
+  "net": -956,
+  "reserve_target": 1103328,
   "categories": [
     {
       "name": "Прочее",
-      "total": 147844,
-      "count": 24
+      "total": 148224,
+      "count": 25
     },
     {
       "name": "Переводы",
@@ -84,7 +84,7 @@
     3000,
     2000,
     2500,
-    0
+    1000
   ],
   "expense_by_day": [
     2930,
@@ -102,9 +102,21 @@
     713,
     2913,
     2240,
-    1794
+    2174
   ],
   "recent": [
+    {
+      "title": "Cyberx Commy",
+      "amount": 380.0,
+      "date": "16 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: C2C PSB M F",
+      "amount": 1000.0,
+      "date": "16 авг",
+      "dir": "in"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 185.0,
@@ -330,18 +342,6 @@
     {
       "title": "Лимонтир 41_S_QR",
       "amount": 300.0,
-      "date": "07 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Лимонтир 41_S_QR",
-      "amount": 300.0,
-      "date": "07 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Лимонтир 41_S_QR",
-      "amount": 600.0,
       "date": "07 авг",
       "dir": "out"
     }
