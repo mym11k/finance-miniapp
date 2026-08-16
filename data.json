@@ -1,13 +1,13 @@
 {
-  "updated": "16.08.2026 21:00",
+  "updated": "16.08.2026 22:00",
   "period": "Август 2026",
-  "balance": 2181.98,
+  "balance": 1672.98,
   "income_total": 184432,
   "income_count": 24,
-  "expense_total": 183948,
-  "expense_count": 75,
-  "net": 484,
-  "reserve_target": 1103688,
+  "expense_total": 184457,
+  "expense_count": 76,
+  "net": -25,
+  "reserve_target": 1106742,
   "categories": [
     {
       "name": "Прочее",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Такси",
-      "total": 8771,
-      "count": 17
+      "total": 9280,
+      "count": 18
     },
     {
       "name": "Кафе",
@@ -102,9 +102,15 @@
     713,
     2913,
     2240,
-    2234
+    2743
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 509.0,
+      "date": "16 авг",
+      "dir": "out"
+    },
     {
       "title": "Перевод: SBOL",
       "amount": 1500.0,
@@ -336,12 +342,6 @@
     {
       "title": "Магазин 26647",
       "amount": 126.98,
-      "date": "08 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 791.0,
       "date": "08 авг",
       "dir": "out"
     }
