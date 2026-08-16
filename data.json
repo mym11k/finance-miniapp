@@ -1,18 +1,18 @@
 {
-  "updated": "16.08.2026 15:00",
+  "updated": "16.08.2026 16:00",
   "period": "Август 2026",
-  "balance": 567.94,
+  "balance": 306.98,
   "income_total": 181932,
   "income_count": 22,
-  "expense_total": 183062,
-  "expense_count": 71,
-  "net": -1130,
-  "reserve_target": 1098372,
+  "expense_total": 183323,
+  "expense_count": 72,
+  "net": -1391,
+  "reserve_target": 1099938,
   "categories": [
     {
       "name": "Прочее",
-      "total": 147583,
-      "count": 23
+      "total": 147844,
+      "count": 24
     },
     {
       "name": "Переводы",
@@ -102,9 +102,15 @@
     713,
     2913,
     2240,
-    1348
+    1609
   ],
   "recent": [
+    {
+      "title": "Магазин 26647",
+      "amount": 260.96,
+      "date": "16 авг",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*LAVKARIT",
       "amount": 338.0,
@@ -338,12 +344,6 @@
       "amount": 3000.0,
       "date": "07 авг",
       "dir": "in"
-    },
-    {
-      "title": "Лимонтир 41_S_QR",
-      "amount": 300.0,
-      "date": "07 авг",
-      "dir": "out"
     }
   ]
 }
