@@ -1,13 +1,13 @@
 {
-  "updated": "17.08.2026 16:00",
+  "updated": "17.08.2026 17:00",
   "period": "Август 2026",
-  "balance": 2197.31,
+  "balance": 1946.31,
   "income_total": 186332,
   "income_count": 25,
-  "expense_total": 185833,
-  "expense_count": 79,
-  "net": 499,
-  "reserve_target": 1114998,
+  "expense_total": 186084,
+  "expense_count": 80,
+  "net": 248,
+  "reserve_target": 1116504,
   "categories": [
     {
       "name": "Прочее",
@@ -16,8 +16,8 @@
     },
     {
       "name": "Переводы",
-      "total": 12070,
-      "count": 5
+      "total": 12321,
+      "count": 6
     },
     {
       "name": "Еда и доставка",
@@ -105,9 +105,15 @@
     2913,
     2240,
     2743,
-    1376
+    1627
   ],
   "recent": [
+    {
+      "title": "Перевод на карту 220220******9201",
+      "amount": 251.0,
+      "date": "17 авг",
+      "dir": "out"
+    },
     {
       "title": "Перевод: SBOL",
       "amount": 1900.0,
@@ -341,12 +347,6 @@
       "amount": 6000.0,
       "date": "10 авг",
       "dir": "in"
-    },
-    {
-      "title": "Северок._P_QR",
-      "amount": 290.0,
-      "date": "09 авг",
-      "dir": "out"
     }
   ]
 }
