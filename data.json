@@ -1,12 +1,12 @@
 {
-  "updated": "17.08.2026 10:00",
+  "updated": "17.08.2026 11:00",
   "period": "Август 2026",
-  "balance": 297.31,
-  "income_total": 184432,
-  "income_count": 24,
+  "balance": 2197.31,
+  "income_total": 186332,
+  "income_count": 25,
   "expense_total": 185833,
   "expense_count": 79,
-  "net": -1401,
+  "net": 499,
   "reserve_target": 1114998,
   "categories": [
     {
@@ -86,7 +86,7 @@
     2000,
     2500,
     2500,
-    0
+    1900
   ],
   "expense_by_day": [
     2930,
@@ -108,6 +108,12 @@
     1376
   ],
   "recent": [
+    {
+      "title": "Перевод: SBOL",
+      "amount": 1900.0,
+      "date": "17 авг",
+      "dir": "in"
+    },
     {
       "title": "Магазин 26647",
       "amount": 197.67,
@@ -339,12 +345,6 @@
     {
       "title": "Северок._P_QR",
       "amount": 290.0,
-      "date": "09 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Северок._P_QR",
-      "amount": 527.0,
       "date": "09 авг",
       "dir": "out"
     }
