@@ -1,18 +1,18 @@
 {
-  "updated": "17.08.2026 05:00",
+  "updated": "17.08.2026 06:00",
   "period": "Август 2026",
-  "balance": 1571.98,
+  "balance": 297.31,
   "income_total": 184432,
   "income_count": 24,
-  "expense_total": 184558,
-  "expense_count": 77,
-  "net": -126,
-  "reserve_target": 1107348,
+  "expense_total": 185833,
+  "expense_count": 79,
+  "net": -1401,
+  "reserve_target": 1114998,
   "categories": [
     {
       "name": "Прочее",
-      "total": 148284,
-      "count": 26
+      "total": 148482,
+      "count": 27
     },
     {
       "name": "Переводы",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Такси",
-      "total": 9381,
-      "count": 19
+      "total": 10458,
+      "count": 20
     },
     {
       "name": "Кафе",
@@ -105,9 +105,21 @@
     2913,
     2240,
     2743,
-    101
+    1376
   ],
   "recent": [
+    {
+      "title": "Магазин 26647",
+      "amount": 197.67,
+      "date": "17 авг",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 1077.0,
+      "date": "17 авг",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 101.0,
@@ -333,18 +345,6 @@
     {
       "title": "Северок._P_QR",
       "amount": 527.0,
-      "date": "09 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод: SBOL",
-      "amount": 1000.0,
-      "date": "09 авг",
-      "dir": "in"
-    },
-    {
-      "title": "Магазин 1049",
-      "amount": 99.98,
       "date": "09 авг",
       "dir": "out"
     }
