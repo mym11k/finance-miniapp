@@ -1,18 +1,23 @@
 {
-  "updated": "18.08.2026 09:00",
+  "updated": "18.08.2026 10:00",
   "period": "Август 2026",
-  "balance": 1607.31,
+  "balance": 251.31,
   "income_total": 187132,
   "income_count": 26,
-  "expense_total": 187223,
-  "expense_count": 81,
-  "net": -91,
-  "reserve_target": 1123338,
+  "expense_total": 188579,
+  "expense_count": 84,
+  "net": -1447,
+  "reserve_target": 1131474,
   "categories": [
     {
       "name": "Прочее",
       "total": 148482,
       "count": 27
+    },
+    {
+      "name": "Еда и доставка",
+      "total": 12768,
+      "count": 25
     },
     {
       "name": "Переводы",
@@ -23,11 +28,6 @@
       "name": "Такси",
       "total": 11597,
       "count": 21
-    },
-    {
-      "name": "Еда и доставка",
-      "total": 11412,
-      "count": 22
     },
     {
       "name": "Кафе",
@@ -67,7 +67,8 @@
     "14",
     "15",
     "16",
-    "17"
+    "17",
+    "18"
   ],
   "income_by_day": [
     1518,
@@ -86,7 +87,8 @@
     2000,
     2500,
     2500,
-    2700
+    2700,
+    0
   ],
   "expense_by_day": [
     2930,
@@ -105,9 +107,28 @@
     2913,
     2240,
     2743,
-    2766
+    2766,
+    1356
   ],
   "recent": [
+    {
+      "title": "YANDEX*EDARIT",
+      "amount": 8.0,
+      "date": "18 авг",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*EDARIT",
+      "amount": 369.0,
+      "date": "18 авг",
+      "dir": "out"
+    },
+    {
+      "title": "YANDEX*LAVKARIT",
+      "amount": 979.0,
+      "date": "18 авг",
+      "dir": "out"
+    },
     {
       "title": "Перевод: SBOL",
       "amount": 800.0,
@@ -328,24 +349,6 @@
       "title": "Магазин 26647",
       "amount": 407.92,
       "date": "11 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 895.0,
-      "date": "11 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод: SBOL",
-      "amount": 3000.0,
-      "date": "10 авг",
-      "dir": "in"
-    },
-    {
-      "title": "Перевод на карту 427672******3031",
-      "amount": 4680.0,
-      "date": "10 авг",
       "dir": "out"
     }
   ]
