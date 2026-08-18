@@ -1,18 +1,18 @@
 {
-  "updated": "18.08.2026 14:00",
+  "updated": "18.08.2026 15:00",
   "period": "Август 2026",
-  "balance": 877.31,
+  "balance": 578.84,
   "income_total": 188382,
   "income_count": 28,
-  "expense_total": 189203,
-  "expense_count": 85,
-  "net": -821,
-  "reserve_target": 1135218,
+  "expense_total": 189502,
+  "expense_count": 86,
+  "net": -1120,
+  "reserve_target": 1137012,
   "categories": [
     {
       "name": "Прочее",
-      "total": 148482,
-      "count": 27
+      "total": 148780,
+      "count": 28
     },
     {
       "name": "Еда и доставка",
@@ -108,9 +108,15 @@
     2240,
     2743,
     2766,
-    1980
+    2278
   ],
   "recent": [
+    {
+      "title": "Магазин 26647",
+      "amount": 298.47,
+      "date": "18 авг",
+      "dir": "out"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 624.0,
@@ -342,12 +348,6 @@
     {
       "title": "YANDEX*FASTEN",
       "amount": 494.0,
-      "date": "11 авг",
-      "dir": "out"
-    },
-    {
-      "title": "ИП Соколов А.А._QR",
-      "amount": 900.0,
       "date": "11 авг",
       "dir": "out"
     }
