@@ -1,13 +1,13 @@
 {
-  "updated": "18.08.2026 12:00",
+  "updated": "18.08.2026 13:00",
   "period": "Август 2026",
-  "balance": 251.31,
-  "income_total": 187132,
-  "income_count": 26,
-  "expense_total": 188579,
-  "expense_count": 84,
-  "net": -1447,
-  "reserve_target": 1131474,
+  "balance": 877.31,
+  "income_total": 188382,
+  "income_count": 28,
+  "expense_total": 189203,
+  "expense_count": 85,
+  "net": -821,
+  "reserve_target": 1135218,
   "categories": [
     {
       "name": "Прочее",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Такси",
-      "total": 11597,
-      "count": 21
+      "total": 12221,
+      "count": 22
     },
     {
       "name": "Кафе",
@@ -88,7 +88,7 @@
     2500,
     2500,
     2700,
-    0
+    1250
   ],
   "expense_by_day": [
     2930,
@@ -108,9 +108,27 @@
     2240,
     2743,
     2766,
-    1356
+    1980
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 624.0,
+      "date": "18 авг",
+      "dir": "out"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 1000.0,
+      "date": "18 авг",
+      "dir": "in"
+    },
+    {
+      "title": "Перевод: SBOL",
+      "amount": 250.0,
+      "date": "18 авг",
+      "dir": "in"
+    },
     {
       "title": "YANDEX*EDARIT",
       "amount": 8.0,
@@ -330,24 +348,6 @@
     {
       "title": "ИП Соколов А.А._QR",
       "amount": 900.0,
-      "date": "11 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Перевод: C2C PSB M F",
-      "amount": 2000.0,
-      "date": "11 авг",
-      "dir": "in"
-    },
-    {
-      "title": "DODO PIZZA KOPEYSK-1",
-      "amount": 1910.0,
-      "date": "11 авг",
-      "dir": "out"
-    },
-    {
-      "title": "Магазин 26647",
-      "amount": 407.92,
       "date": "11 авг",
       "dir": "out"
     }
