@@ -1,12 +1,12 @@
 {
-  "updated": "19.08.2026 12:00",
+  "updated": "19.08.2026 13:00",
   "period": "Август 2026",
-  "balance": 150.84,
-  "income_total": 188382,
-  "income_count": 28,
+  "balance": 400.84,
+  "income_total": 188632,
+  "income_count": 29,
   "expense_total": 189930,
   "expense_count": 87,
-  "net": -1548,
+  "net": -1298,
   "reserve_target": 1139580,
   "categories": [
     {
@@ -90,7 +90,7 @@
     2500,
     2700,
     1250,
-    0
+    250
   ],
   "expense_by_day": [
     2930,
@@ -114,6 +114,12 @@
     428
   ],
   "recent": [
+    {
+      "title": "Перевод: T-Bank Card2Card",
+      "amount": 250.0,
+      "date": "19 авг",
+      "dir": "in"
+    },
     {
       "title": "YANDEX*FASTEN",
       "amount": 428.0,
@@ -347,12 +353,6 @@
       "amount": 335.0,
       "date": "12 авг",
       "dir": "in"
-    },
-    {
-      "title": "YANDEX*LAVKARIT",
-      "amount": 661.0,
-      "date": "12 авг",
-      "dir": "out"
     }
   ]
 }
