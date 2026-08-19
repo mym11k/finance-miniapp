@@ -1,13 +1,13 @@
 {
-  "updated": "19.08.2026 11:00",
+  "updated": "19.08.2026 12:00",
   "period": "Август 2026",
-  "balance": 578.84,
+  "balance": 150.84,
   "income_total": 188382,
   "income_count": 28,
-  "expense_total": 189502,
-  "expense_count": 86,
-  "net": -1120,
-  "reserve_target": 1137012,
+  "expense_total": 189930,
+  "expense_count": 87,
+  "net": -1548,
+  "reserve_target": 1139580,
   "categories": [
     {
       "name": "Прочее",
@@ -20,14 +20,14 @@
       "count": 25
     },
     {
+      "name": "Такси",
+      "total": 12649,
+      "count": 23
+    },
+    {
       "name": "Переводы",
       "total": 12321,
       "count": 6
-    },
-    {
-      "name": "Такси",
-      "total": 12221,
-      "count": 22
     },
     {
       "name": "Кафе",
@@ -68,7 +68,8 @@
     "15",
     "16",
     "17",
-    "18"
+    "18",
+    "19"
   ],
   "income_by_day": [
     1518,
@@ -88,7 +89,8 @@
     2500,
     2500,
     2700,
-    1250
+    1250,
+    0
   ],
   "expense_by_day": [
     2930,
@@ -108,9 +110,16 @@
     2240,
     2743,
     2766,
-    2278
+    2278,
+    428
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 428.0,
+      "date": "19 авг",
+      "dir": "out"
+    },
     {
       "title": "Магазин 26647",
       "amount": 298.47,
@@ -343,12 +352,6 @@
       "title": "YANDEX*LAVKARIT",
       "amount": 661.0,
       "date": "12 авг",
-      "dir": "out"
-    },
-    {
-      "title": "YANDEX*FASTEN",
-      "amount": 494.0,
-      "date": "11 авг",
       "dir": "out"
     }
   ]
