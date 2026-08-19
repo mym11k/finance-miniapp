@@ -1,13 +1,13 @@
 {
-  "updated": "19.08.2026 13:00",
+  "updated": "19.08.2026 14:00",
   "period": "Август 2026",
-  "balance": 400.84,
+  "balance": 73.84,
   "income_total": 188632,
   "income_count": 29,
-  "expense_total": 189930,
-  "expense_count": 87,
-  "net": -1298,
-  "reserve_target": 1139580,
+  "expense_total": 190257,
+  "expense_count": 88,
+  "net": -1625,
+  "reserve_target": 1141542,
   "categories": [
     {
       "name": "Прочее",
@@ -15,14 +15,14 @@
       "count": 28
     },
     {
+      "name": "Такси",
+      "total": 12976,
+      "count": 24
+    },
+    {
       "name": "Еда и доставка",
       "total": 12768,
       "count": 25
-    },
-    {
-      "name": "Такси",
-      "total": 12649,
-      "count": 23
     },
     {
       "name": "Переводы",
@@ -111,9 +111,15 @@
     2743,
     2766,
     2278,
-    428
+    755
   ],
   "recent": [
+    {
+      "title": "YANDEX*FASTEN",
+      "amount": 327.0,
+      "date": "19 авг",
+      "dir": "out"
+    },
     {
       "title": "Перевод: T-Bank Card2Card",
       "amount": 250.0,
@@ -347,12 +353,6 @@
       "amount": 174.96,
       "date": "12 авг",
       "dir": "out"
-    },
-    {
-      "title": "Перевод: YM *ozon_finance",
-      "amount": 335.0,
-      "date": "12 авг",
-      "dir": "in"
     }
   ]
 }
